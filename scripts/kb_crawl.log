@@ -1,0 +1,101 @@
+[14:02:01] 기존 5978건 불러옴(병합 모드)
+[14:02:04] 브라우저 열림 ▶ 팝업 닫고 / 전남·나주시 / 혜택 체크 / 아무 동이나 조회 → '목록' 까지 해주세요.
+[14:02:32] 세팅 감지! 46개 동 자동 순회 시작합니다.
+[14:02:46] (1/46) 경현동: 화면 1건, 신규 0건, 누적 5978건
+[14:03:03] (2/46) 공산면: 실패 - page.click: Timeout 6000ms exceeded.
+Call log:
+[2m  - waiting for locator('#areaDepth3 a[data-value="공산면"]')[22m
+[2m    - locator resolved to <a role="button" data-value="공산면" href="javascript:;">공산면</a>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    11 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+[14:03:21] (3/46) 과원동: 실패 - page.click: Timeout 6000ms exceeded.
+Call log:
+[2m  - waiting for locator('#areaDepth3 a[data-value="과원동"]')[22m
+[2m    - locator resolved to <a role="button" data-value="과원동" href="javascript:;">과원동</a>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    11 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+[14:03:38] (4/46) 관정동: 실패 - page.click: Timeout 6000ms exceeded.
+Call log:
+[2m  - waiting for locator('#areaDepth3 a[data-value="관정동"]')[22m
+[2m    - locator resolved to <a role="button" data-value="관정동" href="javascript:;">관정동</a>[22m
+[2m  - attempting click action[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible, enabled and stable[22m
+[2m      - element is not visible[22m
+[2m    - retrying click action[22m
+[2m      - waiting 100ms[22m
+[2m    11 × waiting for element to be visible, enabled and stable[22m
+[2m       - element is not visible[22m
+[2m     - retrying click action[22m
+[2m       - waiting 500ms[22m
+
+[14:03:52] (5/46) 교동: 화면 1건, 신규 0건, 누적 5978건
+[14:04:01] (6/46) 금계동: 화면 6건, 신규 0건, 누적 5978건
+[14:04:09] (7/46) 금성동: 화면 1건, 신규 0건, 누적 5978건
+[14:04:18] (8/46) 금천면: 화면 6건, 신규 1건, 누적 5979건
+[14:04:27] (9/46) 남내동: 화면 3건, 신규 0건, 누적 5979건
+[14:04:35] (10/46) 남외동: 화면 2건, 신규 0건, 누적 5979건
+[14:04:44] (11/46) 남평읍: 화면 22건, 신규 0건, 누적 5979건
+[14:04:53] (12/46) 노안면: 화면 2건, 신규 0건, 누적 5979건
+[14:05:02] (13/46) 다도면: 화면 1건, 신규 0건, 누적 5979건
+[14:05:10] (14/46) 다시면: 화면 3건, 신규 0건, 누적 5979건
+[14:05:19] (15/46) 대기동: 화면 1건, 신규 0건, 누적 5979건
+[14:05:28] (16/46) 대호동: 화면 94건, 신규 1건, 누적 5980건
+[14:05:36] (17/46) 동강면: 화면 1건, 신규 0건, 누적 5980건
+[14:05:45] (18/46) 동수동: 화면 1건, 신규 0건, 누적 5980건
+[14:05:54] (19/46) 문평면: 화면 1건, 신규 0건, 누적 5980건
+[14:06:02] (20/46) 반남면: 화면 1건, 신규 0건, 누적 5980건
+[14:06:11] (21/46) 보산동: 화면 1건, 신규 0건, 누적 5980건
+[14:06:20] (22/46) 봉황면: 화면 2건, 신규 0건, 누적 5980건
+[14:06:28] (23/46) 부덕동: 화면 1건, 신규 0건, 누적 5980건
+[14:06:37] (24/46) 빛가람동: 화면 921건, 신규 18건, 누적 5998건
+[14:06:46] (25/46) 산정동: 화면 2건, 신규 0건, 누적 5998건
+[14:06:55] (26/46) 산포면: 화면 2건, 신규 0건, 누적 5998건
+[14:07:03] (27/46) 삼도동: 화면 68건, 신규 0건, 누적 5998건
+[14:07:12] (28/46) 삼영동: 화면 2건, 신규 0건, 누적 5998건
+[14:07:21] (29/46) 서내동: 화면 1건, 신규 0건, 누적 5998건
+[14:07:29] (30/46) 석현동: 화면 2건, 신규 0건, 누적 5998건
+[14:07:38] (31/46) 성북동: 화면 19건, 신규 0건, 누적 5998건
+[14:07:47] (32/46) 세지면: 화면 1건, 신규 0건, 누적 5998건
+[14:07:56] (33/46) 송월동: 화면 4건, 신규 0건, 누적 5998건
+[14:08:04] (34/46) 송촌동: 화면 1건, 신규 0건, 누적 5998건
+[14:08:13] (35/46) 안창동: 화면 1건, 신규 0건, 누적 5998건
+[14:08:22] (36/46) 영산동: 화면 47건, 신규 2건, 누적 6000건
+[14:08:30] (37/46) 오량동: 화면 1건, 신규 0건, 누적 6000건
+[14:08:39] (38/46) 왕곡면: 화면 2건, 신규 0건, 누적 6000건
+[14:08:48] (39/46) 용산동: 화면 1건, 신규 0건, 누적 6000건
+[14:08:56] (40/46) 운곡동: 화면 1건, 신규 0건, 누적 6000건
+[14:09:05] (41/46) 이창동: 화면 35건, 신규 0건, 누적 6000건
+[14:09:14] (42/46) 죽림동: 화면 1건, 신규 0건, 누적 6000건
+[14:09:22] (43/46) 중앙동: 화면 74건, 신규 1건, 누적 6001건
+[14:09:31] (44/46) 청동: 화면 1건, 신규 0건, 누적 6001건
+[14:09:40] (45/46) 토계동: 화면 1건, 신규 0건, 누적 6001건
+[14:09:49] (46/46) 평산동: 화면 1건, 신규 0건, 누적 6001건
+[14:09:49] 완료! 총 6001건 저장: data/naju_merchants.csv
