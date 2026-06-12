@@ -2,10 +2,11 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { Clock, Wallet, Puzzle, ChevronRight, ExternalLink } from "lucide-react";
+import { Clock, Wallet, Puzzle, ChevronRight, ExternalLink, Phone } from "lucide-react";
 import { CULTURE_EVENTS, type CultureEvent } from "@/lib/data/culture";
 import HamburgerButton from "@/components/shell/HamburgerButton";
 import AiCourse from "@/components/recommend/AiCourse";
+import CurationNote from "@/components/ui/CurationNote";
 
 type Stop = { name: string; cat: string; cost?: number };
 type Course = {
@@ -163,10 +164,9 @@ function CultureCard({ e, past }: { e: CultureEvent; past?: boolean }) {
         </div>
       )}
       {e.pickNote && (
-        <div className="mx-4 mt-2.5 rounded-xl border px-2.5 py-2 text-[11.5px] leading-relaxed"
-          style={{ borderColor: "color-mix(in oklab, var(--naju-pear) 40%, var(--naju-line))", background: "color-mix(in oklab, var(--naju-pear) 10%, var(--card))" }}>
+        <CurationNote className="mx-4 mt-2.5">
           <b className="text-pear-deep">🧩 나주한조각 큐레이션</b> <span className="text-ink">{e.pickNote}</span>
-        </div>
+        </CurationNote>
       )}
       {e.salons && (
         <details className="px-4 pt-2.5">
@@ -175,7 +175,14 @@ function CultureCard({ e, past }: { e: CultureEvent; past?: boolean }) {
         </details>
       )}
       <div className="mt-1 flex items-center gap-2 px-4 py-3 text-[11.5px]">
-        {e.contact && <span className="text-ink-soft">문의 {e.contact}</span>}
+        {e.contact && (
+          /[0-9]/.test(e.contact)
+            ? <a href={`tel:${e.contact.replace(/[^0-9]/g, "")}`}
+                className="inline-flex items-center gap-1 font-bold text-river active:scale-95">
+                <Phone className="size-3" /> {e.contact}
+              </a>
+            : <span className="text-ink-soft">{e.contact}</span>
+        )}
         {e.link && <a href={e.link} target="_blank" rel="noopener noreferrer" className="ml-auto inline-flex items-center gap-0.5 font-bold text-river">자세히 보기 <ExternalLink className="size-3" /></a>}
       </div>
       {e.host && <p className="px-4 pb-3 text-[10.5px] leading-relaxed text-ink-soft/60">{e.host}</p>}
@@ -195,6 +202,11 @@ export default function RecommendPage() {
   const [events, setEvents] = useState<CultureEvent[]>(CULTURE_EVENTS);
 
   useEffect(() => {
+    // 발견 탭 "행사·혜택" 칩에서 들어오면 featured 탭 자동 선택
+    try {
+      const saved = sessionStorage.getItem("recommend.nav");
+      if (saved) { setNav(saved as Nav); sessionStorage.removeItem("recommend.nav"); }
+    } catch {}
     fetch("/data/seed-courses.json").then((r) => r.json()).then((d) => setCourses(d.courses || [])).catch(() => setCourses([]));
     fetch("/data/taste-categories.json").then((r) => r.json()).then((d) => { if (d?.categories?.length) { setTastes(d.categories); setTaste(d.categories[0].key); } }).catch(() => {});
     fetch("/api/culture").then((r) => r.json()).then((d) => { if (d?.events?.length) setEvents(d.events); }).catch(() => {});
@@ -204,25 +216,13 @@ export default function RecommendPage() {
   const ageCourses = useMemo(() => (courses || []).filter((c) => c.age), [courses]);
   const tasteCat = tastes.find((t) => t.key === taste);
 
-  // 카테고리끼리 코스가 겹치지 않도록 분할(일자별=대표·1박2일 / 동네별=권역당 2 / 취향별=나머지)
-  const parts = useMemo(() => {
-    const isDays = (c: Course) => c.id.startsWith("seed_") || c.days >= 2;
-    const daysList = main.filter(isDays);
-    const rest = main.filter((c) => !isDays(c));
-    const region: Course[] = [], taste: Course[] = [];
-    const byReg: Record<string, Course[]> = {};
-    for (const c of rest) (byReg[c.region] = byReg[c.region] || []).push(c);
-    for (const arr of Object.values(byReg)) arr.forEach((c, i) => (i < 2 ? region : taste).push(c));
-    return { days: daysList, region, taste };
-  }, [main]);
-
   const list = useMemo(() => {
-    if (nav === "days") return parts.days.filter((c) => days === "all" || (days === "day" ? c.days === 1 : c.days >= 2));
-    if (nav === "region") return parts.region.filter((c) => c.region === region);
-    if (nav === "taste") return tasteCat ? parts.taste.filter((c) => matchCourse(c, tasteCat.match)) : parts.taste;
+    if (nav === "days") return main.filter((c) => days === "all" || (days === "day" ? c.days === 1 : c.days >= 2));
+    if (nav === "region") return main.filter((c) => c.region === region);
+    if (nav === "taste") return tasteCat ? main.filter((c) => matchCourse(c, tasteCat.match)) : main;
     if (nav === "age") return ageCourses.filter((c) => c.age === age);
     return [];
-  }, [nav, parts, ageCourses, days, region, taste, age, tasteCat]);
+  }, [nav, main, ageCourses, days, region, taste, age, tasteCat]);
 
   // 추천별: 지난 일정은 하단으로
   const featuredEvents = useMemo(() => {
@@ -319,6 +319,15 @@ export default function RecommendPage() {
           <Chips items={AGES} value={age} onPick={setAge} />
           {ageCourses.length === 0 ? (
             <p className="px-5 pt-10 text-center text-[13px] text-ink-soft">나이대별 코스를 준비 중이에요.</p>
+          ) : list.length === 0 ? (
+            <div className="px-5 pt-10 text-center">
+              <p className="text-[14px] font-bold text-ink">이 나이대 코스가 아직 없어요</p>
+              <p className="mt-1.5 text-[12.5px] leading-relaxed text-ink-soft">전체 코스에서 마음에 드는 코스를 찾아보세요.</p>
+              <button type="button" onClick={() => setNav("days")}
+                className="mt-4 rounded-full bg-ink px-5 py-2 text-[13px] font-bold text-background active:scale-95">
+                전체 코스 보기
+              </button>
+            </div>
           ) : (
             <Feed list={list} />
           )}

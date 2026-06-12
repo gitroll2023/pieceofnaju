@@ -10,9 +10,10 @@ import { regionOf, regionScore, REGION_META, REGION_ORDER, type Region } from "@
 import { PLAY_MERCHANT_IDS, EXPERIENCE_MERCHANT_IDS } from "@/lib/data/play";
 import { isFranchise } from "@/lib/data/franchise";
 import { instaOf, setInstaRuntime } from "@/lib/data/insta";
-import { curationFor, curationPick } from "@/lib/data/curation";
+import { curationFor, curationPickOf } from "@/lib/data/curation";
 import InstaGlyph from "@/components/ui/InstaGlyph";
 import StampButton from "@/components/ui/StampButton";
+import CurationNote from "@/components/ui/CurationNote";
 import WeatherChip from "@/components/home/WeatherChip";
 import HamburgerButton from "@/components/shell/HamburgerButton";
 
@@ -80,11 +81,16 @@ export default function DiscoverPage() {
   const [userLoc, setUserLoc] = useState<{ lat: number; lng: number } | null>(null);
   const [nearby, setNearby] = useState(false);
   const [showFranchise, setShowFranchise] = useState(false);
-  const [searchAll, setSearchAll] = useState(false); // 통합검색(전체) 토글 — 기본은 현재 조각 내 검색
+  const [searchAll, setSearchAll] = useState(true); // 기본: 전체 검색. '이 조각만' 토글로 현재 모드로 제한 가능
   const [instaTick, setInstaTick] = useState(0);
 
   useEffect(() => {
     let alive = true;
+    // 내조각에서 "발견에서 찾기" 눌렀을 때 검색어 복원
+    try {
+      const saved = sessionStorage.getItem("discover.search");
+      if (saved) { setQ(saved); setSearchAll(true); sessionStorage.removeItem("discover.search"); }
+    } catch {}
     fetch("/api/insta-links").then((r) => r.json()).then((d) => { if (alive) { setInstaRuntime(d.map || {}); setInstaTick((t) => t + 1); } }).catch(() => {});
     // 전체를 받아 표시단에서 관광 포인트만 거른다(food·cafe + 즐길거리 allowlist).
     // 즐길거리 가게는 c가 etc/mart 등으로 흩어져 있어 cat 필터로는 누락되므로 id로 거른다.
@@ -117,9 +123,9 @@ export default function DiscoverPage() {
       for (const s of S) if (PLAY_CATS.has(s.cat)) out.push({ kind: "spot", s });
       for (const m of M) if (PLAY_MERCHANT_IDS.has(m.id)) out.push({ kind: "merchant", m });
     } else if (mode === "pick") {
-      // 나주한조각이 다녀온 곳 — 인스타 연결 또는 '다녀온' 큐레이션(pick) 있는 곳
-      for (const m of M) if (instaOf(m.id) || curationPick(m.n)) out.push({ kind: "merchant", m });
-      for (const s of S) if (instaOf(s.id) || curationPick(s.n)) out.push({ kind: "spot", s });
+      // 나주한조각이 직접 다녀온 곳 — pick:true 큐레이션(또는 DB 등록)만. 인스타 링크 단독은 제외.
+      for (const m of M) if (curationPickOf(m.id, m.n)) out.push({ kind: "merchant", m });
+      for (const s of S) if (curationPickOf(s.id, s.n)) out.push({ kind: "spot", s });
     } else {
       for (const s of S) if (EXPERIENCE_CATS.has(s.cat)) out.push({ kind: "spot", s });
       for (const m of M) if (EXPERIENCE_MERCHANT_IDS.has(m.id)) out.push({ kind: "merchant", m });
@@ -188,12 +194,20 @@ export default function DiscoverPage() {
     () => filtered.map((it) => (it.kind === "merchant" ? it.m : spotAsMerchant(it.s))),
     [filtered],
   );
-  // 나주한조각이 다녀온 곳(인스타 연결 또는 큐레이션 꿀팁 있는 곳) — 지도에서 골드 핀으로 강조
+  // 나주한조각이 직접 다녀온 곳 — 지도에서 골드 핀으로 강조(pick:true만)
   const pickIds = useMemo(() => {
     const s = new Set<string>();
-    for (const m of mapPoints) if (instaOf(m.id) || curationPick(m.n)) s.add(m.id);
+    for (const m of mapPoints) if (curationPickOf(m.id, m.n)) s.add(m.id);
     return s;
   }, [mapPoints, instaTick]);
+
+  // 조각Pick 개수 — 프로모 카드용
+  const pickCount = useMemo(() => {
+    let n = 0;
+    for (const m of mer ?? []) if (curationPickOf(m.id, m.n)) n++;
+    for (const s of spots ?? []) if (curationPickOf(s.id, s.n)) n++;
+    return n;
+  }, [mer, spots, instaTick]);
 
   const month = new Date().getMonth() + 1;
   const flowerCard = useMemo(() => {
@@ -270,7 +284,7 @@ export default function DiscoverPage() {
           <WeatherChip />
         </div>
 
-        {/* 4조각 칩 */}
+        {/* 조각 칩 */}
         <div className="no-scrollbar flex items-center gap-1.5 overflow-x-auto px-4 pb-1.5">
           {MODES.map((t) => {
             const active = mode === t.key;
@@ -328,7 +342,7 @@ export default function DiscoverPage() {
                 <Search className="size-4 shrink-0 text-ink-soft" />
                 <input value={q} onChange={(e) => { setQ(e.target.value); setLimit(50); }} onPointerDown={(e) => e.stopPropagation()}
                   onFocus={() => setCollapsed(false)}
-                  placeholder={searchAll ? "전체에서 검색" : `${MODES.find((mm) => mm.key === mode)?.label ?? ""} 검색`}
+                  placeholder={searchAll ? "나주 전체 검색" : `${MODES.find((mm) => mm.key === mode)?.label ?? ""} 안에서 검색`}
                   className="min-w-0 flex-1 bg-transparent text-[13px] text-ink outline-none placeholder:text-ink-soft/80" />
                 {qq && (
                   <button type="button" onPointerDown={(e) => e.stopPropagation()} onClick={() => { setQ(""); setLimit(50); }} aria-label="검색어 지우기"
@@ -338,17 +352,17 @@ export default function DiscoverPage() {
                 )}
                 {qq && (
                   <button type="button" onPointerDown={(e) => e.stopPropagation()} onClick={() => { setSearchAll((v) => !v); setLimit(50); }}
-                    aria-pressed={searchAll}
+                    aria-pressed={!searchAll}
                     className="shrink-0 rounded-full px-2 py-0.5 text-[11px] font-bold transition"
-                    style={searchAll ? { background: "var(--naju-pear)", color: "#2a1c06" } : { background: "var(--muted)", color: "var(--naju-ink-soft)" }}>
-                    전체
+                    style={!searchAll ? { background: "var(--naju-pear)", color: "#2a1c06" } : { background: "var(--muted)", color: "var(--naju-ink-soft)" }}>
+                    이 조각만
                   </button>
                 )}
               </div>
             </div>
             <div className="flex items-center gap-2 px-4 pb-2.5">
               <div className="inline-flex rounded-full border border-line bg-background p-0.5" onPointerDown={(e) => e.stopPropagation()}>
-                {([["screen", "이 화면"], ["all", "전체"]] as const).map(([v, label]) => (
+                {([["screen", "이 화면"], ["all", "나주 전역"]] as const).map(([v, label]) => (
                   <button key={v} type="button" onClick={() => { setViewMode(v); setLimit(50); }}
                     className="rounded-full px-3 py-1 text-[12px] font-bold transition"
                     style={viewMode === v ? { background: "var(--naju-ink)", color: "var(--background)" } : { color: "var(--naju-ink-soft)" }}>
@@ -357,18 +371,46 @@ export default function DiscoverPage() {
                 ))}
               </div>
               <span className="text-[12px] font-bold text-ink-soft">{loading ? "…" : `${count.toLocaleString()}곳`}</span>
-              {userLoc && (
-                <button type="button" onPointerDown={(e) => e.stopPropagation()} onClick={() => setNearby((v) => !v)} aria-pressed={nearby}
-                  className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 text-[11.5px] font-bold transition active:scale-95"
-                  style={nearby ? { background: "#2b7fff", borderColor: "#2b7fff", color: "#fff" } : { borderColor: "var(--naju-line)", background: "var(--background)", color: "var(--naju-ink-soft)" }}>
-                  <Crosshair className="size-3" /> 내 주변순
-                </button>
-              )}
+              <button type="button" onPointerDown={(e) => e.stopPropagation()}
+                onClick={() => {
+                  if (!userLoc) {
+                    if (typeof navigator !== "undefined") {
+                      navigator.geolocation?.getCurrentPosition(
+                        (p) => { setUserLoc({ lat: p.coords.latitude, lng: p.coords.longitude }); setNearby(true); },
+                        () => {},
+                      );
+                    }
+                  } else {
+                    setNearby((v) => !v);
+                  }
+                }}
+                aria-pressed={nearby}
+                className="ml-auto inline-flex shrink-0 items-center gap-1 rounded-full border px-2.5 py-1 text-[11.5px] font-bold transition active:scale-95"
+                style={nearby ? { background: "#2b7fff", borderColor: "#2b7fff", color: "#fff" } : { borderColor: "var(--naju-line)", background: "var(--background)", color: "var(--naju-ink-soft)" }}>
+                <Crosshair className="size-3" /> 내 주변순
+              </button>
             </div>
           </div>
 
           {/* 스크롤 목록 */}
           <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+            {/* 조각Pick 프로모 — 다른 모드에서도 "직접 다녀온 곳" 상단 노출 */}
+            {mode !== "pick" && pickCount > 0 && !qq && (
+              <section className="px-4 pt-2.5">
+                <button type="button"
+                  onClick={() => { setMode("pick"); setRegion(""); setDong(""); setLimit(50); }}
+                  className="w-full overflow-hidden rounded-2xl border px-3.5 py-3 text-left transition active:scale-[0.99]"
+                  style={{ borderColor: "color-mix(in oklab, var(--naju-pear) 40%, var(--naju-line))", background: "color-mix(in oklab, var(--naju-pear) 10%, var(--card))" }}>
+                  <div className="flex items-center justify-between gap-2">
+                    <div>
+                      <p className="text-[11px] font-bold text-pear-deep">나주한조각이 직접 다녀왔어요</p>
+                      <p className="mt-0.5 text-[13px] font-extrabold text-ink">직접 가본 곳 {pickCount}곳 보기 →</p>
+                    </div>
+                    <span className="shrink-0 text-2xl">🧩</span>
+                  </div>
+                </button>
+              </section>
+            )}
             {flowerCard && (
               <section className="px-4 pt-2">
                 <div className="rounded-2xl border border-line bg-background p-3">
@@ -435,12 +477,12 @@ function MerchantRow({ m, userLoc, onFocus }: { m: Merchant; userLoc: { lat: num
     <li onClick={onFocus} className="cursor-pointer border-b border-line/70 py-3 last:border-0">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
-          <p className="truncate text-[14.5px] font-bold text-ink">{m.n}</p>
-          <p className="mt-0.5 truncate text-[11.5px] text-ink-soft">
+          <p className="truncate text-sub font-bold text-ink">{m.n}</p>
+          <p className="mt-0.5 truncate text-cap text-ink-soft">
             {CATEGORY_META[m.c].emoji} {m.t || CATEGORY_META[m.c].label}
             {userLoc && <span className="font-bold text-river"> · {distLabel(distanceKm(userLoc.lat, userLoc.lng, m.lat, m.lng))}</span>}
           </p>
-          <p className="mt-0.5 flex items-start gap-1 text-[11.5px] text-ink-soft">
+          <p className="mt-0.5 flex items-start gap-1 text-cap text-ink-soft">
             <MapPin className="mt-px size-3 shrink-0" /><span className="line-clamp-1">{m.a}</span>
           </p>
         </div>
@@ -455,22 +497,19 @@ function MerchantRow({ m, userLoc, onFocus }: { m: Merchant; userLoc: { lat: num
             <Navigation className="size-3.5" />
           </a>
           {m.tel && (
-            <a href={`tel:${m.tel.replace(/[^0-9]/g, "")}`} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-0.5 rounded-full border border-line px-2.5 py-1 text-[11.5px] font-semibold text-river active:scale-95">
+            <a href={`tel:${m.tel.replace(/[^0-9]/g, "")}`} onClick={(e) => e.stopPropagation()} className="inline-flex items-center gap-0.5 rounded-full border border-line px-2.5 py-1 text-cap font-semibold text-river active:scale-95">
               <Phone className="size-3" />전화
             </a>
           )}
         </div>
       </div>
       {curationFor(m.n) && (
-        <p className="mt-2 line-clamp-2 rounded-lg border px-2 py-1.5 text-[11px] leading-relaxed text-ink"
-          style={{ borderColor: "color-mix(in oklab, var(--naju-pear) 40%, var(--naju-line))", background: "color-mix(in oklab, var(--naju-pear) 10%, var(--card))" }}>
-          🧩 {curationFor(m.n)}
-        </p>
+        <CurationNote className="mt-2 line-clamp-2 text-ink">🧩 {curationFor(m.n)}</CurationNote>
       )}
       {progs.length > 0 && (
         <div className="mt-2 flex flex-wrap gap-1">
           {progs.map((k) => (
-            <span key={k} className="rounded-md px-1.5 py-0.5 text-[10.5px] font-bold text-white" style={{ backgroundColor: PROGRAM_META[k].color }}>{PROGRAM_META[k].short}</span>
+            <span key={k} className="rounded-md px-1.5 py-0.5 text-cap font-bold text-white" style={{ backgroundColor: PROGRAM_META[k].color }}>{PROGRAM_META[k].short}</span>
           ))}
         </div>
       )}
@@ -490,35 +529,32 @@ function SpotCard({ s, userLoc, onFocus }: { s: Spot; userLoc: { lat: number; ln
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-1.5">
-              <span className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold"
+              <span className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-cap font-bold"
                 style={{ background: `color-mix(in oklab, ${meta.color} 15%, white)`, color: meta.color }}>
                 {meta.emoji} {s.cat}
               </span>
-              {s.season && <span className="text-[11px] font-semibold text-pear-deep">{s.season}</span>}
-              {userLoc && <span className="text-[11px] font-bold text-river">{distLabel(distanceKm(userLoc.lat, userLoc.lng, s.lat, s.lng))}</span>}
+              {s.season && <span className="text-cap font-semibold text-pear-deep">{s.season}</span>}
+              {userLoc && <span className="text-cap font-bold text-river">{distLabel(distanceKm(userLoc.lat, userLoc.lng, s.lat, s.lng))}</span>}
             </div>
             <h3 className="brand-serif mt-1.5 text-[16px] font-extrabold text-ink">{s.n}</h3>
           </div>
           <StampButton item={{ id: s.id, n: s.n, c: "spot", d: "", lat: s.lat, lng: s.lng, t: s.cat }} compact />
         </div>
-        {s.summary && <p className="mt-1.5 line-clamp-3 text-[12.5px] leading-relaxed text-ink-soft">{s.summary}</p>}
+        {s.summary && <p className="mt-1.5 line-clamp-3 text-body leading-relaxed text-ink-soft">{s.summary}</p>}
         {curationFor(s.n) && (
-          <p className="mt-1.5 line-clamp-2 rounded-lg border px-2 py-1.5 text-[11px] leading-relaxed text-ink"
-            style={{ borderColor: "color-mix(in oklab, var(--naju-pear) 40%, var(--naju-line))", background: "color-mix(in oklab, var(--naju-pear) 10%, var(--card))" }}>
-            🧩 {curationFor(s.n)}
-          </p>
+          <CurationNote className="mt-1.5 line-clamp-2 text-ink">🧩 {curationFor(s.n)}</CurationNote>
         )}
         {s.flower && (
-          <p className="mt-1.5 inline-flex items-center gap-1 rounded-md bg-hongeo/10 px-1.5 py-0.5 text-[11px] font-bold text-hongeo">🌸 {s.flower}</p>
+          <p className="mt-1.5 inline-flex items-center gap-1 rounded-md bg-hongeo/10 px-1.5 py-0.5 text-cap font-bold text-hongeo">🌸 {s.flower}</p>
         )}
         {s.highlights.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {s.highlights.map((h, i) => (
-              <span key={i} className="rounded-md bg-muted px-1.5 py-0.5 text-[10.5px] font-medium text-ink-soft">{h}</span>
+              <span key={i} className="rounded-md bg-muted px-1.5 py-0.5 text-cap font-medium text-ink-soft">{h}</span>
             ))}
           </div>
         )}
-        <div className="mt-2 flex items-center justify-between gap-2 text-[11.5px] text-ink-soft">
+        <div className="mt-2 flex items-center justify-between gap-2 text-cap text-ink-soft">
           <span className="inline-flex items-center gap-1 truncate"><MapPin className="size-3 shrink-0" />{s.a}</span>
           <div className="flex shrink-0 items-center gap-2.5">
             {(s.insta || instaOf(s.id)) && (
@@ -531,7 +567,7 @@ function SpotCard({ s, userLoc, onFocus }: { s: Spot; userLoc: { lat: number; ln
             </a>
           </div>
         </div>
-        {s.tip && <p className="mt-1.5 text-[11.5px] leading-snug text-ink-soft/90">💡 {s.tip}</p>}
+        {s.tip && <p className="mt-1.5 text-cap leading-snug text-ink-soft/90">💡 {s.tip}</p>}
       </div>
     </li>
   );

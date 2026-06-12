@@ -1,7 +1,8 @@
 import { createHash } from "crypto";
 import { sql } from "@/lib/db";
 import { readSession } from "@/lib/auth";
-import { notifyAdmin, notifyAdminPhotos } from "@/lib/telegram";
+import { clientIp } from "@/lib/ip";
+import { notifyAdminPhotos } from "@/lib/telegram";
 
 export const dynamic = "force-dynamic";
 
@@ -11,8 +12,7 @@ const MAX_COUNT = 4; // 한 번에 최대 4장
 const HOURLY_LIMIT = 8; // 같은 IP 시간당 제출 한도
 
 function ipHash(req: Request): string {
-  const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
-  return createHash("sha256").update(ip + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 32);
+  return createHash("sha256").update(clientIp(req) + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 32);
 }
 
 // 문의·건의·행사 제보 — DB에 내용 저장 없이 텔레그램으로만. 비회원도 가능.

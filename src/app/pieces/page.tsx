@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Puzzle, Share2, X, MapPin, Navigation, Route, Trash2 } from "lucide-react";
+import { Puzzle, Share2, X, MapPin, Navigation, Route, Trash2, Search } from "lucide-react";
 import { useStamps, type Stamp } from "@/lib/useStamps";
 import { useCourses } from "@/lib/useCourses";
 import HamburgerButton from "@/components/shell/HamburgerButton";
@@ -30,6 +31,7 @@ function dirUrl(s: Stamp) {
 const cColor = (c: string) => (c === "food" ? "#d9534f" : c === "cafe" ? "#c98a3b" : spotMeta(c).color);
 
 export default function PiecesPage() {
+  const router = useRouter();
   const { stamps, toggle, count, setMemo } = useStamps();
   const { courses, remove: removeCourse } = useCourses();
   const [tab, setTab] = useState<"pieces" | "course">("pieces");
@@ -251,11 +253,20 @@ export default function PiecesPage() {
                       className="inline-flex flex-1 items-center justify-center gap-1.5 rounded-2xl bg-river px-4 py-3 text-[14px] font-bold text-white transition active:scale-[0.98]">
                       <Navigation className="size-4" />길찾기
                     </a>
-                    <button type="button" onClick={() => { toggle(selected); setSelected(null); }}
+                    <button type="button"
+                      onClick={() => {
+                        try { sessionStorage.setItem("discover.search", selected.n); } catch {}
+                        setSelected(null);
+                        router.push("/");
+                      }}
                       className="inline-flex items-center justify-center gap-1 rounded-2xl border border-line bg-card px-4 py-3 text-[13px] font-bold text-ink-soft active:scale-95">
-                      <X className="size-4" />조각 빼기
+                      <Search className="size-4" />발견에서 찾기
                     </button>
                   </div>
+                  <button type="button" onClick={() => { toggle(selected); setSelected(null); }}
+                    className="mt-2 flex w-full items-center justify-center gap-1 rounded-xl border border-line/60 py-2 text-[12px] font-bold text-ink-soft/60 active:scale-95">
+                    <X className="size-3.5" />조각 빼기
+                  </button>
                 </>
               );
             })()}

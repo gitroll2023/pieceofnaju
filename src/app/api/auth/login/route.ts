@@ -1,9 +1,16 @@
 import { sql } from "@/lib/db";
 import { verifyPassword, createSession, validNickname, checkAdminCreds, createAdminSession } from "@/lib/auth";
+import { rateLimit } from "@/lib/throttle";
+
+export const dynamic = "force-dynamic";
 
 const bad = (error: string, status = 400) => Response.json({ ok: false, error }, { status });
 
 export async function POST(req: Request) {
+  // 브루트포스 방어: IP당 10분에 10회 시도 제한.
+  if (!(await rateLimit(req, "login", 10, 10))) {
+    return bad("시도가 너무 많아요. 잠시 후 다시 시도해주세요.", 429);
+  }
   const body = await req.json().catch(() => null);
   const nickname = body?.nickname;
   const password = body?.password;

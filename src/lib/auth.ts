@@ -4,7 +4,13 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
 // 인증 — 비번은 bcrypt 해시(평문 저장 X), 세션은 HS256 서명 httpOnly 쿠키.
-const secret = new TextEncoder().encode(process.env.AUTH_SECRET || "dev-insecure-secret");
+// AUTH_SECRET 미설정 시 프로덕션에서는 즉시 실패(공개된 폴백 키로 JWT 위조 → 계정·관리자 탈취 방지).
+// 개발 환경에서만 임시 키 허용.
+const rawSecret = process.env.AUTH_SECRET;
+if (!rawSecret && process.env.NODE_ENV === "production") {
+  throw new Error("AUTH_SECRET 환경변수가 설정되지 않았습니다. 프로덕션에서는 필수입니다.");
+}
+const secret = new TextEncoder().encode(rawSecret || "dev-insecure-secret");
 const COOKIE = "naju_session";
 const MAX_AGE = 60 * 60 * 24 * 30; // 30일
 

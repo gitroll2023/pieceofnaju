@@ -137,6 +137,13 @@
   --radius-md: var(--radius-md);
   --radius-lg: var(--radius-lg);
   --radius-xl: var(--radius-xl);
+
+  /* 타이포 5단계 스케일 — 0.5px 단위 난립 → text-cap·body·sub·title·display 통일 */
+  --font-size-cap: 11px;      /* 캡션·뱃지·보조 정보 (10~11.5px) */
+  --font-size-body: 13px;     /* 본문·목록 (12~13.5px) */
+  --font-size-sub: 15px;      /* 서브타이틀·리스트 제목 (14~15px) */
+  --font-size-title: 19px;    /* 섹션·카드 제목 (18~20px) */
+  --font-size-display: 26px;  /* 페이지 헤드 (24~28px) */
 }
 
 * {

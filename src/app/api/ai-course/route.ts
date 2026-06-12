@@ -1,6 +1,7 @@
 import { createHash } from "crypto";
 import { sql } from "@/lib/db";
 import { readSession } from "@/lib/auth";
+import { clientIp } from "@/lib/ip";
 import { regionOf, regionScore, REGION_META, type Region } from "@/lib/region";
 import { isFranchise } from "@/lib/data/franchise";
 import type { Merchant } from "@/lib/data/merchants";
@@ -24,8 +25,7 @@ const SEE_BY_VIBE: Record<string, string[]> = {
 const VIBE_LABEL: Record<string, string> = { food: "미식", cafe: "카페·디저트", nature: "자연·힐링", history: "역사·문화", experience: "체험", mixed: "두루두루" };
 
 function ipHash(req: Request) {
-  const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
-  return "ip:" + createHash("sha256").update(ip + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 24);
+  return "ip:" + createHash("sha256").update(clientIp(req) + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 24);
 }
 
 export async function POST(req: Request) {

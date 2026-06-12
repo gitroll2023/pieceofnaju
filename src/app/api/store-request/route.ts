@@ -1,6 +1,7 @@
 import { createHash } from "crypto";
 import { sql } from "@/lib/db";
 import { readSession } from "@/lib/auth";
+import { clientIp } from "@/lib/ip";
 import { notifyAdmin, notifyAdminPhoto, notifyAdminPhotos } from "@/lib/telegram";
 
 export const dynamic = "force-dynamic";
@@ -10,8 +11,7 @@ const MAX_IMG = 8 * 1024 * 1024;
 const LABEL: Record<string, string> = { eat: "먹거리", drink: "마실거리", see: "볼거리", play: "즐길거리" };
 
 function ipHash(req: Request) {
-  const ip = (req.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
-  return createHash("sha256").update(ip + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 32);
+  return createHash("sha256").update(clientIp(req) + (process.env.AUTH_SECRET || "")).digest("hex").slice(0, 32);
 }
 
 // 가게/장소 등록 신청 — 가게 '사진 필수'. DB(store_requests)에 저장 + 텔레그램으로 사진과 승인 버튼 전송.
