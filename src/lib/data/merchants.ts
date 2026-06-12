@@ -4,7 +4,7 @@ export type MerchantCat =
   | "food" | "cafe" | "grocery" | "mart" | "beauty" | "edu"
   | "medical" | "car" | "fashion" | "leisure" | "life" | "etc";
 
-export type ProgramKey = "goyuga" | "onnuri" | "market";
+export type ProgramKey = "onnuri" | "market";
 
 /** public/data/merchants.json 한 건 (압축 키) */
 export interface Merchant {
@@ -16,7 +16,7 @@ export interface Merchant {
   lng: number;
   t: string;   // 업종(원본)
   c: MerchantCat;
-  p: ProgramKey[]; // 혜택
+  p: string[]; // 혜택 코드(원본). 표시 대상은 visiblePrograms()로 거른다(고유가 등 제외)
   geo: string; // kakao | dong
   tel: string;
 }
@@ -48,9 +48,13 @@ export const PROGRAM_META: Record<
   ProgramKey,
   { label: string; short: string; color: string }
 > = {
-  goyuga: { label: "고유가 피해지원금", short: "고유가", color: "#e8702a" },
   onnuri: { label: "온누리상품권", short: "온누리", color: "#2f7d4f" },
   market: { label: "전통시장", short: "전통시장", color: "#9c5a2f" },
 };
 
-export const PROGRAM_ORDER: ProgramKey[] = ["goyuga", "onnuri", "market"];
+export const PROGRAM_ORDER: ProgramKey[] = ["onnuri", "market"];
+
+/** 가맹점 혜택 코드(m.p)에서 표시 대상만 추린다. 데이터에 남은 'goyuga' 등은 자동 제외. */
+export function visiblePrograms(p: string[]): ProgramKey[] {
+  return p.filter((k): k is ProgramKey => k in PROGRAM_META);
+}

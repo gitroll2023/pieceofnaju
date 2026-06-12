@@ -12,6 +12,9 @@ export interface Spot {
   lat: number;
   lng: number;
   a: string; // 주소
+  img?: string; // 대표 이미지(공공누리, TourAPI 출처)
+  src?: string; // 출처 태그(tourapi 등)
+  insta?: string; // 해당 장소 인스타그램 URL(있으면 카드에 연결)
 }
 
 export interface Flower {
@@ -28,8 +31,10 @@ export const SPOT_CAT_META: Record<string, { emoji: string; color: string }> = {
   꽃명소: { emoji: "🌸", color: "#d168a0" },
   자연: { emoji: "⛰️", color: "#5b9c52" },
   전망카페: { emoji: "☕", color: "#c98a3b" },
+  양조장: { emoji: "🍺", color: "#b9772e" },
   전망: { emoji: "🔭", color: "#3f8fbf" },
-  체험: { emoji: "🎨", color: "#2f9d8f" },
+  체험: { emoji: "🧶", color: "#2f9d8f" },
+  레저: { emoji: "🎢", color: "#8c6bb1" },
   축제: { emoji: "🎉", color: "#d9534f" },
   공원: { emoji: "🌳", color: "#5b9c52" },
   기타: { emoji: "📍", color: "#9a9088" },

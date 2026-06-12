@@ -1,0 +1,1820 @@
+{
+ "anchors": [
+  {
+   "anchor": "행운분식",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 2분",
+     "why": "같은 금성관길 골목 100년 노포. 맑고 깊은 곰탕·수육곰탕이 대표, TV 다수 출연. 수요일 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=5xX9qiAjOoKu"
+    },
+    {
+     "name": "금성관",
+     "kind": "관광",
+     "mode": "도보 3분",
+     "why": "보물 2037호 조선시대 객사. 수령 600년 은행나무가 어우러진 무료 관람지, 산책 코스로 딱.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=49c0b004-b11d-4adc-b56c-80d97fd82b3a"
+    },
+    {
+     "name": "해이나주",
+     "kind": "카페",
+     "mode": "도보 5분",
+     "why": "금성관 옆 한옥카페. 잔디 마당과 2층 금성관 뷰, 솔티드카라멜슈페너·에그타르트가 시그니처.",
+     "source": "https://www.diningcode.com/profile.php?rid=U4AIugVTtXkM"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "1939년 고택 7채 복원한 4,000평 정원형 복합문화공간. 나주배 크림라떼·양갱 등 특산물 메뉴.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "나주 목사내아 금학헌",
+     "kind": "체험",
+     "mode": "도보 5분",
+     "why": "조선시대 나주목사 관저 복원 공간. 1박2일 촬영지, 한옥 숙박·한복 체험 가능.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=afac3a19-2fb6-4de8-ab1d-9fc7a2bc716b"
+    },
+    {
+     "name": "나주 목사고을시장",
+     "kind": "시장",
+     "mode": "도보 5~10분",
+     "why": "문화관광형시장 광주·전남 1위. 추어탕·홍어·튀김 가성비 먹거리, 토요 야시장 운영.",
+     "source": "https://www.namdonews.com/news/articleView.html?idxno=383975"
+    },
+    {
+     "name": "홍어1번지",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "영산포 홍어거리 노포. 홍어정식 한 상에 삼합·찜·튀김·전까지, 영산포 근대거리 산책 연계.",
+     "source": "https://www.diningcode.com/profile.php?rid=65PavUoDwykO"
+    },
+    {
+     "name": "영산포 근대역사문화거리",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "1910년대 포구 마을. 한국 유일 내륙 등대와 일제강점기 건물 보존, 레트로 산책 코스.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=cb2a8ef7-2ddb-4a23-9752-12a42c07d2cc"
+    }
+   ]
+  },
+  {
+   "anchor": "나주곰탕 하얀집",
+   "nearby": [
+    {
+     "name": "금성관",
+     "kind": "관광",
+     "mode": "도보 1분",
+     "why": "하얀집 바로 앞 나주목 객사. 전국 객사 중 가장 웅장, 무료 개방.",
+     "source": "https://www.naju.go.kr/tour/sights/cultural_assets/all?mode=view&idx=506"
+    },
+    {
+     "name": "나주 목사내아 금학헌",
+     "kind": "체험",
+     "mode": "도보 3분",
+     "why": "조선시대 나주목사 관저 복원 한옥. 수령 500년 팽나무, 한옥 숙박·전통 체험 운영.",
+     "source": "https://www.naju.go.kr/moksanaea"
+    },
+    {
+     "name": "삼대나주곰탕원조집 노안집",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "1963년 시작한 나주 3대 곰탕. 주문과 동시에 고기를 썰어 넣는 방식, 진한 사골 국물.",
+     "source": "https://namu.wiki/w/%EC%82%BC%EB%8C%80%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%EC%9B%90%EC%A1%B0%EC%A7%91%20%EB%85%B8%EC%95%88%EC%A7%91"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "1939년 고택 복원 4,000평 한옥 복합문화공간. 나주배 디저트가 시그니처, 정원 사진 명소.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "나주향교",
+     "kind": "관광",
+     "mode": "도보 12분",
+     "why": "전국 최대 향교 중 하나. 수령 500년 비자나무, 가을 은행나무 단풍이 압권. 무료.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=55a11e31-91e9-4618-8c58-c2b68e2c4f98"
+    },
+    {
+     "name": "구 나주역 & 나주학생독립운동기념관",
+     "kind": "관광",
+     "mode": "도보 15분",
+     "why": "1929년 광주학생항일운동 발화점. 당시 역사 보존된 역사공원, 원도심 도보 코스 필수.",
+     "source": "https://www.naju.go.kr/tour/sights/nature/river?mode=view&idx=274"
+    },
+    {
+     "name": "예향한정식",
+     "kind": "맛집",
+     "mode": "도보 10분",
+     "why": "150년 기생집 한옥 개조 한정식집. 홍어·육회·낙지탕탕이 등 남도 진미 50여 찬, 25,000원대.",
+     "source": "https://www.siksinhot.com/P/367564"
+    },
+    {
+     "name": "송현불고기",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "43년 전통 연탄불고기 노포. EBS 극한직업 출연, 370도 연탄불 돼지불고기. 월요일 휴무.",
+     "source": "https://v.daum.net/v/62nbdvc6Of"
+    }
+   ]
+  },
+  {
+   "anchor": "사매기째깐한박물관",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "1910년 창업 4대째 나주곰탕 원조. 새벽부터 끓인 맑은 한우 육수, 아침 8시부터 영업.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "향교길20카페",
+     "kind": "카페",
+     "mode": "도보 5분",
+     "why": "나주읍성 서성문 옆 2층 한옥카페. 붕어빵·단팥죽 등 전통 디저트와 쌍화차·대추차.",
+     "source": "https://www.diningcode.com/profile.php?rid=fZwq0oR3bJG7"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 7분",
+     "why": "4천 평 민간 정원 속 고택 복합문화공간. 나주배 뱅쇼·크림라떼·수제양갱, 통창 정원 뷰.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "하나가든",
+     "kind": "맛집",
+     "mode": "차 3분",
+     "why": "현지인 줄서는 육회비빔밥 전문점. 신선한 한우 육회 11,000원, 점심 한정·재료 소진 마감.",
+     "source": "https://www.diningcode.com/profile.php?rid=f2qRN5xHzdpa"
+    },
+    {
+     "name": "금성관 및 나주목관아(금학헌)",
+     "kind": "관광",
+     "mode": "도보 2분",
+     "why": "박물관 앞 전국 최대 객사 금성관과 목사내아 금학헌. 한옥체험·숙박 가능, 야간 공연도.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=49c0b004-b11d-4adc-b56c-80d97fd82b3a"
+    },
+    {
+     "name": "나주향교",
+     "kind": "관광",
+     "mode": "도보 10분",
+     "why": "전국 3대 향교. 대성전은 보물 제394호, 1407년 창건. 고샅길 도보 코스와 연계. 무료.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=55a11e31-91e9-4618-8c58-c2b68e2c4f98"
+    },
+    {
+     "name": "나주 목사고을시장",
+     "kind": "시장",
+     "mode": "도보 10분",
+     "why": "원도심 중심 전통시장. 곰탕·홍어·장어 먹거리, 오일장(4·9일)과 토요 문화야시장.",
+     "source": "http://www.bbsj.kr/sijang/market.php?sij_idx=284"
+    },
+    {
+     "name": "영산포홍어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "600년 전통 영산포 홍어거리 노포. 삭힌 홍어회·삼합·무침·전 풀코스, KBS 한식탐험대 소개.",
+     "source": "https://www.diningcode.com/profile.php?rid=mVL8fQ7a2Ul1"
+    }
+   ]
+  },
+  {
+   "anchor": "나주당",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "1910년 창업 4대 노포. 맑고 진한 국물에 수육 올린 나주식 곰탕, 이른 방문 권장.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "삼대나주곰탕원조집 노안집",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "1963년 장터 국밥집 시작 나주 3대 곰탕. 주문 즉시 고기 썰어 넣는 방식, 07:00 오픈.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3825bfc6-eb4d-4bf2-b39b-580918bd5638"
+    },
+    {
+     "name": "행운분식",
+     "kind": "디저트",
+     "mode": "도보 5분",
+     "why": "원도심 명물 분식점. 사라다빵·찹쌀도너츠로 SNS 화제, 현지인·관광객 모두 찾는 가성비 간식.",
+     "source": "https://www.diningcode.com/profile.php?rid=p9NrEuKTJbuT"
+    },
+    {
+     "name": "향교길20 한옥카페",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "나주읍성 서성문 옆 2층 한옥카페. 쌍화차·대추차·호박죽과 상투과자·가래떡구이.",
+     "source": "https://www.elle.co.kr/article/70180"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 12분",
+     "why": "전남 우수건축자산 1호 고택 카페. 4,000평 정원, 나주배 크림라떼·양갱·빵 특산물 디저트.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "남파고택",
+     "kind": "관광",
+     "mode": "도보 10분",
+     "why": "1884년 건립 전남 최대 조선 후기 상류 주택(국가민속문화재). 읍성 도보 코스, 무료 관람.",
+     "source": "https://ko.wikipedia.org/wiki/%EB%82%98%EC%A3%BC_%EB%82%A8%ED%8C%8C%EA%B3%A0%ED%83%9D"
+    },
+    {
+     "name": "송현불고기",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "EBS 극한직업 출연 43년 연탄불고기 노포. 단일 메뉴 연탄불고기, 불맛·육즙 탁월.",
+     "source": "https://v.daum.net/v/62nbdvc6Of"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "백반기행 출연, 600년 영산포 홍어거리 대표. 황토 옹기 숙성 삼합·홍어정식이 시그니처.",
+     "source": "https://busan7.com/entry/%EB%B0%B1%EB%B0%98%EA%B8%B0%ED%96%89-%EB%82%98%EC%A3%BC-600%EB%85%84-%EC%A0%84%ED%86%B5-%EC%98%81%EC%82%B0%ED%8F%AC-%ED%99%8D%EC%96%B4%EA%B1%B0%EB%A6%AC-%ED%99%8D%EC%96%B4%EC%A0%95%EC%8B%9D-%EC%BD%94%EC%8A%A4"
+    }
+   ]
+  },
+  {
+   "anchor": "금성관",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 1분",
+     "why": "금성관 앞 110년 노포. 맑고 진한 사골 육수에 수육 넉넉, 나주 3대 곰탕. 주말 웨이팅.",
+     "source": "https://namu.wiki/w/%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%20%ED%95%98%EC%96%80%EC%A7%91"
+    },
+    {
+     "name": "삼대나주곰탕원조집 노안집",
+     "kind": "맛집",
+     "mode": "도보 1분",
+     "why": "1963년 시작 60년 노포. 진한 사골 국물에 고기 양 많음, 점심 피크 대기.",
+     "source": "https://namu.wiki/w/%EC%82%BC%EB%8C%80%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%EC%9B%90%EC%A1%B0%EC%A7%91%20%EB%85%B8%EC%95%88%EC%A7%91"
+    },
+    {
+     "name": "사매기 나주곰탕",
+     "kind": "맛집",
+     "mode": "도보 2분",
+     "why": "가마솥 투명·깔끔한 육수가 특징. 하얀집·노안집과 결 다른 깔끔 스타일, 가성비 호평.",
+     "source": "https://polle.com/place/35XWzk/%EC%82%AC%EB%A7%A4%EA%B8%B0%20%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95"
+    },
+    {
+     "name": "하나가든",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "도축 당일 육회로 만드는 육회비빔밥 전문. 현지인 추천 상위권, 점심 한정 운영.",
+     "source": "https://www.diningcode.com/profile.php?rid=f2qRN5xHzdpa"
+    },
+    {
+     "name": "나주목사내아 금학헌",
+     "kind": "체험",
+     "mode": "도보 3분",
+     "why": "조선시대 나주목사 관사 복원 한옥. 500년 팽나무 소원 명소, 한옥 숙박·마당 개방.",
+     "source": "https://www.naju.go.kr/moksanaea"
+    },
+    {
+     "name": "나주향교",
+     "kind": "관광",
+     "mode": "도보 10분",
+     "why": "전국 3대 향교, 규모는 성균관 다음. 은행나무 마당과 대성전, 무료 관람.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=185a56c3-2853-41ff-b897-4bc635e30b28"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "4천 평 정원 속 고택 4채 개조 한옥카페. 나주배 뱅쇼·크림라떼·양갱, 인증샷 명소.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "나주 쪽 염색 본고장. 쪽·황토·치자 천연염료 천 물들이기 체험, 아이 동반 가족에 인기.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    }
+   ]
+  },
+  {
+   "anchor": "나주향교",
+   "nearby": [
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 5분",
+     "why": "향교 인근 고택 복합문화공간. 전남 우수건축자산 1호, 나주배 디저트와 4,000평 정원 인생샷.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "향교길20",
+     "kind": "카페",
+     "mode": "도보 3분",
+     "why": "향교 앞 한옥 2층 카페. 쌍화차·대추차와 호박죽·가래떡구이·붕어빵, 나주배쌀빵도 판매.",
+     "source": "https://www.diningcode.com/profile.php?rid=fZwq0oR3bJG7"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 10분",
+     "why": "110년 4대 노포. 맑고 깊은 한우 육수에 수육, 점심 전 웨이팅 필수인 나주 필수 코스.",
+     "source": "https://namu.wiki/w/%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%20%ED%95%98%EC%96%80%EC%A7%91"
+    },
+    {
+     "name": "하나가든",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "현지인 줄서는 육회비빔밥 전문. 당일 육회만 사용, 점심 한정·재료 소진 마감하는 노포.",
+     "source": "https://www.diningcode.com/profile.php?rid=f2qRN5xHzdpa"
+    },
+    {
+     "name": "금성관",
+     "kind": "관광",
+     "mode": "도보 10분",
+     "why": "향교에서 400m. 전국 객사 중 가장 웅장한 조선시대 나주목 객사(보물), 무료 입장.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=49c0b004-b11d-4adc-b56c-80d97fd82b3a"
+    },
+    {
+     "name": "나주 목사내아 금학헌",
+     "kind": "체험",
+     "mode": "도보 12분",
+     "why": "금성관 옆 조선시대 나주목사 관저 복원. 한옥 숙박, 배꽃 우산 대여 등 이색 체험.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=afac3a19-2fb6-4de8-ab1d-9fc7a2bc716b"
+    },
+    {
+     "name": "나주목사고을시장",
+     "kind": "시장",
+     "mode": "차 5분",
+     "why": "전국우수시장 대통령상 전통시장. 곰탕·홍어·배·참기름 특산물, 토요문화장터 공연.",
+     "source": "https://www.naju.go.kr/tour/food/shopping/traditional_market"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "백반기행 소개 영산포 홍어거리 대표. 홍어정식 코스로 600년 영산포 홍어를 합리적으로.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    }
+   ]
+  },
+  {
+   "anchor": "이화림",
+   "nearby": [
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "1940년대부터 구진포 장어거리 대표 노포. 영산강 민물장어를 다 구워 내주는 방식, 27,000원.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "쪽·황토·치자 천연염색 체험을 사계절 운영. 상설 전시 무료, 가족·커플 체험 코스로 인기.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "나주 복암리 고분전시관",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "사적 404호 복암리 고분군 인접. 하나의 봉분에 32기 무덤 집약, 출토 유물 전시 무료.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=f4697186-150c-4252-9443-89d8eee9a9ed"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "차 15분",
+     "why": "1939년 고택 한옥카페. 나주배 파르페·스무디 등 로컬 배 메뉴, 갤러리·한옥스테이 운영.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "영산포 선창 출발 전통 황포돛배 체험. 왕복 약 50분, 선장 전라도 사투리 해설.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "느러지 전망대",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "영산강 S자 굽이 한반도 지형 조망 명소. 6~7월 수국 절정, 나주 대표 인생샷 포인트. 무료.",
+     "source": "https://triple.guide/attractions/0e4b0c26-7862-463f-bcca-9d6b80c5e07e"
+    },
+    {
+     "name": "장생장어구이",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "구진포 장어거리 전문점. 장어구이·장어탕 전문, 신흥장어 만석 시 대안인 현지인 단골.",
+     "source": "https://www.diningcode.com/profile.php?rid=PAHTZ5dUS3Ed"
+    }
+   ]
+  },
+  {
+   "anchor": "남평507",
+   "nearby": [
+    {
+     "name": "우남식당",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "50년 중화요리 노포. SBS 생활의 달인 출연, 할머니 손맛 탕수육과 채수 짬뽕. 월 휴무.",
+     "source": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0700&key=20190120.99099007845"
+    },
+    {
+     "name": "남평국밥집",
+     "kind": "맛집",
+     "mode": "도보 5~7분",
+     "why": "토박이만 아는 국밥집. 잡내 없는 국물에 머릿고기·내장, 재료 소진 시 마감. 가성비 최강.",
+     "source": "https://www.diningcode.com/profile.php?rid=mGRKm3mABHHE"
+    },
+    {
+     "name": "부영식육식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "정육점 직영 암소 한우 전문. 생고기·육회비빔밥이 현지 단골 메뉴, 다이닝코드 4.5점. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    },
+    {
+     "name": "라피네",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "주택 개조 핑크톤 감성 카페. 드들강 드라이브 코스, 망고실타래 빙수가 시그니처. 월 휴무.",
+     "source": "https://kr.trip.com/moments/detail/naju-si-1595529-128840343/"
+    },
+    {
+     "name": "남평 드들강 솔밭유원지",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "드들강 따라 노송 군락 힐링 산책지. 무료입장·주차, 가족 피크닉·강변 산책에 적합.",
+     "source": "https://naju.go.kr/tour/sights/nature/all?mode=view&idx=302"
+    },
+    {
+     "name": "카페 더뷰",
+     "kind": "카페",
+     "mode": "차 10분",
+     "why": "영산강 위에 떠 있는 통창 뷰 카페. 강 파노라마 보며 커피·베이글, 영산강 드라이브 연계.",
+     "source": "https://www.diningcode.com/profile.php?rid=SQzponEqpFKf"
+    },
+    {
+     "name": "도래마을 옛집",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "풍산홍씨 500년 집성촌. 전통 한옥 보존 국가문화재, 전통 염색 체험·한옥숙박 운영.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=73b9a579-9744-4792-ac4e-06328ff1f294"
+    }
+   ]
+  },
+  {
+   "anchor": "티롤도너츠",
+   "nearby": [
+    {
+     "name": "조아식당",
+     "kind": "맛집",
+     "mode": "도보 1분",
+     "why": "티롤도너츠 옆 동네 밥집. 치즈오므라이스·김치짜글이가 대표, 집밥 스타일·부담 없는 가격.",
+     "source": "https://www.diningcode.com/profile.php?rid=rW7mS321Zf8z"
+    },
+    {
+     "name": "남평국밥집",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "전통시장 앞 현지인 단골 국밥집. 푸짐하고 잡내 없는 국물, 재료 소진 시 마감. 가성비.",
+     "source": "https://www.diningcode.com/profile.php?rid=mGRKm3mABHHE"
+    },
+    {
+     "name": "우남식당",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "생생정보통·생활의 달인 출연 40년 중화요리 노포. 옛날식 탕수육과 채수 짬뽕. 월 휴무.",
+     "source": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0700&key=20190120.99099007845"
+    },
+    {
+     "name": "부영식육식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "정육 직영 암소 한우. 상차림비만 내고 바로 구워 먹는 가성비, 생고기·육회비빔밥. 일 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    },
+    {
+     "name": "곱창명가",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "남평 골목 로컬 국밥·곱창집. 뼈다귀해장국·암뽕순대국밥·곱창구이, 현지 단골 식당.",
+     "source": "https://www.diningcode.com/profile.php?rid=kurDMMTw9LwT"
+    },
+    {
+     "name": "카페 마당",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "한옥 감성 대형 카페. 야외 폭포 조경·프라이빗 룸, 쌈돈까스·피자 식사 메뉴로 원스톱.",
+     "source": "https://www.diningcode.com/profile.php?rid=lB899Ed4rpMl"
+    },
+    {
+     "name": "드들강 솔밭유원지",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "지석강 삼각주 노송 숲 유원지. 무료, 탁사정·안성현 노래비가 있어 역사·문화 산책 코스.",
+     "source": "https://naju.go.kr/tour/sights/nature/all?mode=view&idx=302"
+    },
+    {
+     "name": "불회사",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "덕룡산 고찰. 보물 대웅전, 동백·비자나무 숲과 야생 차밭, 단풍 명소·템플스테이.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=6bf8ff13-2c2f-422a-9ed7-081dff3488ec"
+    }
+   ]
+  },
+  {
+   "anchor": "드들강 솔밭 유원지",
+   "nearby": [
+    {
+     "name": "남평국밥집",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "전통시장 옆 노포 국밥집. 9종 메뉴, 양 많고 친절하다는 현지 평. 가성비 최강.",
+     "source": "https://www.diningcode.com/profile.php?rid=mGRKm3mABHHE"
+    },
+    {
+     "name": "우남식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "생활의 달인 출연 나주 탕수육 명소. 새콤달콤 빨간 소스 탕수육과 채수 짬뽕. 월 휴무.",
+     "source": "https://www.kookje.co.kr/news2011/asp/newsbody.asp?code=0700&key=20190120.99099007845"
+    },
+    {
+     "name": "부영식육식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "정육 직영 암소 한우, 다이닝코드 4.5. 고기 구입 후 상차림비 내고 먹는 방식. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    },
+    {
+     "name": "애호박국밥전문점",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "드문 애호박국밥 전문 노포. 3가지 육수에 오겹살+애호박, 메뉴 4종만 운영하는 찐 전문점.",
+     "source": "https://www.diningcode.com/profile.php?rid=SPWsbtttxJRp"
+    },
+    {
+     "name": "조아식당",
+     "kind": "맛집",
+     "mode": "도보",
+     "why": "드들강 강변 골목 집밥집. 김치짜글이·돌솥비빔밥·오므라이스, 나들이 한 끼로 딱. 일 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=rW7mS321Zf8z"
+    },
+    {
+     "name": "남평전통시장",
+     "kind": "시장",
+     "mode": "차 5분",
+     "why": "5일·10일 오일장. 남평 농산물·로컬 먹거리 집결지, 장날 현지 분위기 제대로.",
+     "source": "https://www.naju.go.kr/tour"
+    },
+    {
+     "name": "불회사(덕룡산)",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "366년 고찰. 보물 대웅전·석장승, 동백숲·단풍 경내. 2025년 호랑비 숲길 트레킹 명소.",
+     "source": "https://www.khan.co.kr/article/202503311313011"
+    },
+    {
+     "name": "나주배박물관",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "세계 유일 배 전문 박물관. 나주배 재배 역사·품종 전시, 가족 체험 관광에 적합.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=35894a29-fced-4138-9c11-bb64fb6fd151"
+    }
+   ]
+  },
+  {
+   "anchor": "영산포 등대",
+   "nearby": [
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "도보 1분",
+     "why": "백반기행 소개, 등대 옆 홍어거리 입구. 국내산 홍어 고집, 홍어정식·보리애국. 화요일 격주 휴무.",
+     "source": "https://www.gasnews.com/bbs/view.html?idxno=59155&sc_category="
+    },
+    {
+     "name": "홍어1번지",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "영산포 홍어거리 노포. 홍어삼합·무침·전·튀김·보리애국 한 상, 현지·방문객 평 상위권.",
+     "source": "https://www.diningcode.com/profile.php?rid=65PavUoDwykO"
+    },
+    {
+     "name": "강변홍어",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "영산강 강변 뷰 자리. 홍어전·튀김이 특히 인기, 마무리 홍어애탕 1인 뚝배기 제공.",
+     "source": "https://www.diningcode.com/profile.php?rid=68BtCHn1x7Dy"
+    },
+    {
+     "name": "영산포역사갤러리",
+     "kind": "관광",
+     "mode": "도보 3분",
+     "why": "일제강점기 조선식산은행 건물 활용 무료 역사갤러리. 등대·오일장 흑백사진 전시, 해설사 상주.",
+     "source": "https://culture.blogsailing.com/2382"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "도보 2분",
+     "why": "등대 앞 선착장 출발. 영산강 왕복 10km·50분, 2008년 복원 황포돛배. 성인 8,000원.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "영산나루",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "동양척식주식회사 문서고 리모델링 근대 건축. 레스토랑·전통찻집 성류정, 영산강 조망 테라스.",
+     "source": "https://www.tripadvisor.com/Restaurant_Review-g1074106-d9197663-Reviews-Yeong_Mountain_Port-Naju_Jeollanam_do.html"
+    },
+    {
+     "name": "영산포 근대문화 골목",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "100년 넘은 목조건물·일본인 지주 가옥·영산포교회 남은 근대문화유산 거리. 자유 도보 무료.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=cb2a8ef7-2ddb-4a23-9752-12a42c07d2cc"
+    },
+    {
+     "name": "블루포트 나주영산포점",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "영산강 유채꽃밭 인근 강변 카페. 2층 루프탑 강 뷰, 직접 만든 베이커리. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=JGuOGLE2w2O6"
+    }
+   ]
+  },
+  {
+   "anchor": "영산포 홍어거리",
+   "nearby": [
+    {
+     "name": "영산포 역사갤러리",
+     "kind": "관광",
+     "mode": "도보 2분",
+     "why": "1918년 조선식산은행 건물 개조 무료 전시관. 근대도시 영산포 역사·사진·모형, 골목 탐방 세트.",
+     "source": "https://naju.go.kr/tour/sights/cultural_assets/heritage_material?mode=view&idx=300"
+    },
+    {
+     "name": "영산포 등대 & 황포돛배 체험",
+     "kind": "체험",
+     "mode": "도보 5분",
+     "why": "1915년 한국 유일 내륙 하천 등대. 황포돛배 왕복 10km·50분 유람, 선장 사투리 해설.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "영산포홍어",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "황토방 옹기 직접 숙성 노포. KBS 한식탐험대 소개, 홍어삼합·홍어애국 시그니처, 1인 주문 가능.",
+     "source": "https://www.diningcode.com/profile.php?rid=mVL8fQ7a2Ul1"
+    },
+    {
+     "name": "등대홍어맛집",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "홍어거리 입구 현지 단골집. 삭힌 홍어회·삼합·애·튀김·찜 코스에 홍어애국+밥 마무리.",
+     "source": "https://www.gasnews.com/bbs/view.html?idxno=59155"
+    },
+    {
+     "name": "장어원",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "무항생제 자포니카종 민물장어 숯불구이. 쇼케이스에서 골라 100g 단위 주문, 홍어+장어 코스.",
+     "source": "https://www.diningcode.com/profile.php?rid=5Hih8eShJoHT"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1910년 창업 4대 원조. 새벽부터 끓인 한우 뼈 육수 맑은 곰탕, 전국구 유명세로 웨이팅.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "황포돛배 도착지 인근. 쪽·황토·치자 천연염색 체험 연중 운영, 국가무형문화재 염색장 지역.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "영산포커피",
+     "kind": "카페",
+     "mode": "도보 5~10분",
+     "why": "영산포 로컬 독립 카페. 파운드케이크·카페라떼 후기 다수, 홍어거리 탐방 전후 쉬어가기.",
+     "source": "https://www.diningcode.com/profile.php?rid=87vtZlus11DX"
+    }
+   ]
+  },
+  {
+   "anchor": "영산강 황포돛배 선착장",
+   "nearby": [
+    {
+     "name": "영산포 홍어거리",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "선착장 옆 600년 전통 홍어 전문 거리. 홍어삼합·무침·보리애국, 황토방 숙성 영산포홍어 대표.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4b555ea0-89c7-4656-9ce4-ab04137de0b3"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "홍어거리 아담한 전문점. 가스신문 명예기자 추천 로컬 맛집, 홍어정식·회·삼합. 화요일 격주 휴무.",
+     "source": "https://www.gasnews.com/bbs/view.html?idxno=59155&sc_category="
+    },
+    {
+     "name": "영산포 역사갤러리",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "구 조선식산은행 건물 역사관. 영산포 변천사 전시, 무료·해설사 상주, 나주 관광 10선.",
+     "source": "https://naju.go.kr/tour/sights/tour10?mode=view&idx=300"
+    },
+    {
+     "name": "영산포 등대 & 선창거리 근대골목",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "내륙 유일 근대 등대. 뚝방길 350m 따라 수령 250년 팽나무 영산나루 쉼터까지 역사 산책.",
+     "source": "https://traveli.net/news/view.php?no=10323"
+    },
+    {
+     "name": "황금어장 민물장어",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "풍물시장 인근 현지인 장어 맛집. 영암산 자포니카종 숯불구이, 평일 저녁도 만석.",
+     "source": "https://www.diningcode.com/profile.php?rid=IopHEOtZuzkZ"
+    },
+    {
+     "name": "장어원",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "풍물시장 인근 무항생제 자포니카종 민물장어 숯불구이. 다이닝코드 나주 장어 상위권.",
+     "source": "https://www.diningcode.com/profile.php?rid=5Hih8eShJoHT"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "4대 110년 노포. 새벽 2시부터 뽑은 한우 육수에 수육, 곰탕거리 터줏대감. 웨이팅 흔함.",
+     "source": "https://www.elle.co.kr/article/70289"
+    },
+    {
+     "name": "나주 목사고을 시장",
+     "kind": "시장",
+     "mode": "차 10분",
+     "why": "읍내 전통 상설시장. 나주배·로컬 반찬·순대·국밥 저렴, 금성관·읍성과 반나절 코스.",
+     "source": "https://access.visitkorea.or.kr/ms/detail.do?cotId=5be4e2ae-96db-4eb8-823e-400516167617"
+    }
+   ]
+  },
+  {
+   "anchor": "타오르는강 문학관",
+   "nearby": [
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "백반기행 소개 홍어 전문점. 홍어삼합·찜·애·애국 대표, 현지인·미디어 인정 노포급. 화요일 격주 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    },
+    {
+     "name": "홍어1번지",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "영산포 홍어거리 핵심. 홍어정식 풀코스(무침·찜·전·튀김·삼합·보리애국), 완성도 호평.",
+     "source": "https://www.diningcode.com/profile.php?rid=65PavUoDwykO"
+    },
+    {
+     "name": "영산포역사갤러리",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "조선식산은행 건물 무료 전시관. 근대도시 영산포 변천사, 식사 연계 자연스러움. 월 휴관.",
+     "source": "https://www.ktriptips.com/kor/culture/3014604"
+    },
+    {
+     "name": "영산포 등대 & 근대문화유산 골목",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "1915년 국내 내륙 유일 등대. 일본인 가옥 130여 채 골목으로 근대 수탈 역사 체감 코스.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=831290e3-e879-485e-983b-f73296152862"
+    },
+    {
+     "name": "황포돛배 체험",
+     "kind": "체험",
+     "mode": "도보 10분",
+     "why": "영산포 선착장 출발 왕복 10km·50분. 2008년 복원, 앙암바위·영모정 등 유적 경유. 성인 8,000원.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "장어원",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "풍물시장 인근 민물장어 전문. 영암산 무항생제 자포니카종 숯불구이, 룸 있어 가족 모임.",
+     "source": "https://www.diningcode.com/profile.php?rid=5Hih8eShJoHT"
+    },
+    {
+     "name": "행운분식",
+     "kind": "디저트",
+     "mode": "차 10분",
+     "why": "곰탕거리 인근 노포 분식. 사라다빵·왕사라다빵 시그니처, 현지·관광객 줄 서는 명물. 일 휴무.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=913fc5a6-734c-4bbc-acaa-a5b0d97efdb3"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "차 10분",
+     "why": "향교 옆 고택 7채 복원 정원카페. 나주배 착즙 음료·크림라떼·빵, 4천 평 정원 산책.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    }
+   ]
+  },
+  {
+   "anchor": "아트스페이스 영산포",
+   "nearby": [
+    {
+     "name": "영산포 등대 & 황포돛배 선착장",
+     "kind": "체험",
+     "mode": "도보 5분",
+     "why": "1915년 내륙 유일 강변 등대(등록문화재 129호). 옆 선착장 황포돛배 왕복 10km·50분 체험.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "영산포역사갤러리",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "무료 역사 전시공간. 흑산도 이주민부터 호남 3대 근대도시 영산포 변천, 동선상 묶기 좋음.",
+     "source": "https://www.ktriptips.com/kor/culture/3014604"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "도보 5~7분",
+     "why": "백반기행 280회 노포. 홍어정식 한 상(삼합·애·코·전·튀김·찜·무침·애탕), 리필 인심. 화요일 격주 휴무.",
+     "source": "https://www.gasnews.com/bbs/view.html?idxno=59155"
+    },
+    {
+     "name": "영산포홍어",
+     "kind": "맛집",
+     "mode": "도보 5~7분",
+     "why": "KBS 한식탐험대 소개 홍어 전문점. 삼합·무침·전·찜 다양, 1인 주문 가능해 혼행 진입 쉬움.",
+     "source": "https://www.diningcode.com/profile.php?rid=mVL8fQ7a2Ul1"
+    },
+    {
+     "name": "카페 더뷰",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "영산강 수면 위 통창 뷰 카페. 물 위에 떠 있는 느낌, 커피·디저트. 월 휴무·무료 주차.",
+     "source": "https://www.diningcode.com/profile.php?rid=SQzponEqpFKf"
+    },
+    {
+     "name": "블루포트 나주영산포점",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "영산강변 대형 베이커리 카페. 직접 굽는 공방형 매장, 강 뷰와 갓 구운 빵. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=JGuOGLE2w2O6"
+    },
+    {
+     "name": "영산포커피",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "영산동 로컬 카페. 포근한 인테리어·넓은 좌석, 디카페인 라떼·파운드케이크, 가족 단위 적합.",
+     "source": "https://www.diningcode.com/profile.php?rid=87vtZlus11DX"
+    },
+    {
+     "name": "홍어1번지",
+     "kind": "맛집",
+     "mode": "도보 5~7분",
+     "why": "국내 최초 홍어 전문 표방 2대 가게. 삼합·무침·튀김·전 10여 종, 등대·갤러리와 동선 연계.",
+     "source": "https://www.diningcode.com/profile.php?rid=65PavUoDwykO"
+    }
+   ]
+  },
+  {
+   "anchor": "빛가람호수공원",
+   "nearby": [
+    {
+     "name": "빛가람전망대 (배멧산)",
+     "kind": "관광",
+     "mode": "도보",
+     "why": "배멧산 정상 20.7m 랜드마크. 모노레일 후 국내 유일 돌미끄럼틀, 혁신도시 야경 포인트.",
+     "source": "https://www.naju.go.kr/tour/sights/tour10?mode=view&idx=624"
+    },
+    {
+     "name": "러스틱",
+     "kind": "카페",
+     "mode": "도보",
+     "why": "혁신도시 내 다이닝코드 4.8 고평점 로컬 카페. 감성 인테리어·디저트 호평. 일 휴무.",
+     "source": "https://www.instagram.com/cafe.rustic/"
+    },
+    {
+     "name": "해탄 나주혁신도시점",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "돌판오징어볶음 전문, 식신 5.0. 오징어볶음·해장탕·셀프 날치알 주먹밥, 현지인 점심·저녁 맛집.",
+     "source": "https://www.siksinhot.com/theme/magazine/7786"
+    },
+    {
+     "name": "솔솥 나주혁신점",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "스테이크 솥밥 시그니처. 다이닝코드 솥밥 상위권, 현지인 든든한 한 끼 후기 꾸준.",
+     "source": "https://www.diningcode.com/profile.php?rid=UKNlGuP4jxlf"
+    },
+    {
+     "name": "친츠 나주혁신점",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "혁신도시 태국음식 전문, 다이닝코드 4.5. 게살볶음밥·쉬림프팟타이, 복층 공간감.",
+     "source": "https://www.diningcode.com/profile.php?rid=BDhPVlNdtc5z"
+    },
+    {
+     "name": "송현불고기",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "EBS 극한직업 출연 43년 연탄불고기 원조. 370도 연탄불 돼지불고기, 단짠+불향.",
+     "source": "https://knewsfood.com/%EA%B7%B9%ED%95%9C%EC%A7%81%EC%97%85-43%EB%85%84-%EC%A0%84%ED%86%B5-%EC%97%B0%ED%83%84%EB%B6%88%EA%B3%A0%EA%B8%B0-%EB%82%98%EC%A3%BC-%EC%86%A1%ED%98%84%EB%B6%88%EA%B3%A0%EA%B8%B0-%ED%86%A0%ED%95%98/"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "110년 4대 원조. 새벽 2시부터 끓인 한우 육수의 깊고 맑은 국물, 나주 필수 코스.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "영산포 선착장 출발 왕복 5km·50분 뱃길. 2008년 복원 황포돛배, 홍어거리·등대 연계.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    }
+   ]
+  },
+  {
+   "anchor": "빛가람전망대",
+   "nearby": [
+    {
+     "name": "빛가람호수공원",
+     "kind": "관광",
+     "mode": "도보",
+     "why": "전망대 아래 인공생태호수공원. 음악분수·여울다리·퐁당전망대 산책로, 무료. 습지 수상작.",
+     "source": "https://www.naju.go.kr/tour/sights/nature/all?mode=view&idx=301"
+    },
+    {
+     "name": "비스터(B.ster)",
+     "kind": "디저트",
+     "mode": "차 5분",
+     "why": "혁신도시 대표 로컬 베이커리카페. 천연발효종 소금빵·크림치즈바게트·잠봉뵈르가 시그니처.",
+     "source": "https://www.siksinhot.com/P/1423888"
+    },
+    {
+     "name": "위도노",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "다이닝코드 4.9 이탈리안. 돌문어 오일 파스타·카치오페페·화덕피자, 웨이팅·예약 필수.",
+     "source": "https://www.diningcode.com/profile.php?rid=FKctwl12e4B3"
+    },
+    {
+     "name": "헤일로 로스터스 스마트파크점",
+     "kind": "카페",
+     "mode": "차 5분",
+     "why": "국가대표 바리스타 직접 로스팅 스페셜티 로스터리. 머그 주문 시 아메리카노 리필 무료. 주말 휴무.",
+     "source": "https://www.siksinhot.com/P/1599587"
+    },
+    {
+     "name": "진미국밥",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "빛가람동 현지 단골 국밥집, 다이닝코드 4.7. 당근마켓 커뮤니티 반복 추천, 가성비 한 끼.",
+     "source": "https://www.daangn.com/kr/community/%EB%82%98%EC%A3%BC-%ED%98%84%EC%A7%80%EC%9D%B8-%EB%8F%99%EB%84%A4%EB%A7%9B%EC%A7%91-%EA%B3%B5%EC%9C%A0%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94-euc7s67icdwv/"
+    },
+    {
+     "name": "전라남도 산림자원연구소 메타세쿼이아길",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "약 400m 메타세쿼이아 가로수길 전국급 포토스팟. 770여 종 난대 수목원, 무료 개방.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=0eac8ebd-3748-414a-83ba-6ca7ab0bedc9"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1910년 개업 4대 116년 노포. 맑고 구수한 국물에 수육, 금성관 앞 나주 3미 곰탕 원조.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "1964년 개업 구진포 장어거리 대표 노포. 나주 3대 맛 중 장어, 소금·양념구이 27,000원.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    }
+   ]
+  },
+  {
+   "anchor": "우주드림",
+   "nearby": [
+    {
+     "name": "도래마을 옛집",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "풍산 홍씨 집성촌 한옥마을. 중요민속자료 고택 4채 밀집, 한옥스테이·전통염색 체험.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=73b9a579-9744-4792-ac4e-06328ff1f294"
+    },
+    {
+     "name": "약선명가",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "혁신도시 10년 넘은 한방삼계탕 전문, 다이닝코드 5.0. 한방·전복삼계탕 깊은 국물, 재방문율 높음.",
+     "source": "https://www.diningcode.com/profile.php?rid=QKyJAQu9TcRQ"
+    },
+    {
+     "name": "천석골국밥",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "혁신도시권 현지인 '4년째 여기만' 노포. 모듬국밥·뼈해장국·닭곰탕, 옛 분위기 그대로. 일 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=DKoNQ26cZyuC"
+    },
+    {
+     "name": "긴자료코 나주혁신점",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "현지인 최애 정통 돈까스집. 두꺼운 고기·카운터석, 당근마켓 반복 언급, 점심 웨이팅.",
+     "source": "https://www.diningcode.com/profile.php?rid=PUD0UbnAlFRj"
+    },
+    {
+     "name": "신목사골칼국수",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "현지인 '진리' 칼국수·샤브샤브집. 샤브샤브칼국수·바지락칼국수 가성비, 가족 단위 적합.",
+     "source": "https://forourtour.com/%EB%82%98%EC%A3%BC-%EB%A7%9B%EC%A7%91/"
+    },
+    {
+     "name": "미닝아웃 베이커리",
+     "kind": "디저트",
+     "mode": "차 15분",
+     "why": "천연효모빵 브런치·베이커리. 당근라페·잠봉뵈르 샌드위치 시그니처, 잔디밭 뷰. 월·화 휴무.",
+     "source": "https://www.threads.com/@sirudduk_/post/DHNkfk_zQt0/"
+    },
+    {
+     "name": "빛가람 호수공원 & 빛가람전망대",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "대형 수변공원. 배메산 전망대 혁신도시 조망, 음악분수·놀이시설 무료. 저녁 야경 산책.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=499c5617-f594-4f5a-8c10-4453d6e461cb"
+    },
+    {
+     "name": "전통항아리보쌈",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "빛가람동 로컬 보쌈집. 항아리보쌈 4인 세트·영양솥밥, 점심특선 가성비, 현지 단골 다수.",
+     "source": "https://www.diningcode.com/profile.php?rid=ajIg31Y5hZMk"
+    }
+   ]
+  },
+  {
+   "anchor": "나주랜드",
+   "nearby": [
+    {
+     "name": "남평 드들강 솔밭유원지",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "지석강 삼각주 노송 솔밭 산책로. 무료, 왕버들·배롱나무 길의 강변 피크닉 명소.",
+     "source": "https://naju.go.kr/tour/sights/nature/all?mode=view&idx=302"
+    },
+    {
+     "name": "남평국밥집",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "현지인만 아는 로컬 국밥 노포. 소머리·남평·백순대국밥, 양 많고 잡내 없음. 재료 소진 마감.",
+     "source": "https://www.diningcode.com/profile.php?rid=mGRKm3mABHHE"
+    },
+    {
+     "name": "우남식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "생활의 달인 출연 탕수육 노포. 할머니 손맛 중화요리, 채수 짬뽕. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=w79CdQ9ZMGZ9"
+    },
+    {
+     "name": "남평부영식육식당",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "40년 정육 직영 한우. 암소만 엄선, 생고기·육회비빔밥, 선지국 무료, 다이닝코드 4.5. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    },
+    {
+     "name": "강변장어돼지갈비",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "지석강변 가족 외식 맛집. 직원이 구워주는 민물장어·돼지숯불갈비, 트립어드바이저 4.7.",
+     "source": "https://www.diningcode.com/profile.php?rid=zfxX7Mu0oB05"
+    },
+    {
+     "name": "티롤도너츠",
+     "kind": "디저트",
+     "mode": "차 5분",
+     "why": "우유 발효종 저온 숙성 도넛 전문. 딸기크림도넛·고로케, 부담 없는 맛, 인기 제품 조기 품절. 월 휴무.",
+     "source": "https://v.daum.net/v/X2reXi2XEn"
+    },
+    {
+     "name": "도래마을",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "풍산 홍씨 집성촌, 500년 한옥 7채 보존. 도지정 문화재 탐방 무료, 서기당 한옥스테이.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=73b9a579-9744-4792-ac4e-06328ff1f294"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "영산포 선착장 출발 왕복 10km·50분. 영모정·기오정 누정과 근대문화유산 연계 관람.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    }
+   ]
+  },
+  {
+   "anchor": "불회사",
+   "nearby": [
+    {
+     "name": "불회사 비로찻집",
+     "kind": "체험",
+     "mode": "도보",
+     "why": "경내 무인 찻집. 비자나무 발효차 '비로약차'를 셀프로, 천년 고찰 다례 체험. 석장승·대웅전도.",
+     "source": "https://bulhoesa.org"
+    },
+    {
+     "name": "불회사 템플스테이",
+     "kind": "체험",
+     "mode": "도보",
+     "why": "공식 운영 당일/1박 템플스테이. 1700년 야생차밭·비자나무 숲 둘레길(2.6km) 치유 산책.",
+     "source": "https://www.templestay.com/fe/MI000000000000000062/temple/introView.do"
+    },
+    {
+     "name": "도래마을 한옥스테이",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "15세기 풍산 홍씨 집성촌. 조선 고가 군락과 영호정, 서기당 한옥 숙박. 불회사와 반나절 코스.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=73b9a579-9744-4792-ac4e-06328ff1f294"
+    },
+    {
+     "name": "남평국밥집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "남평시장 토박이 줄서는 내장국밥 노포. 내장·돼지머리국밥 가성비, 동네 어르신 입소문.",
+     "source": "https://www.diningcode.com/profile.php?rid=mGRKm3mABHHE"
+    },
+    {
+     "name": "부영식육식당",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "정육 직영 암소 한우. 직접 고른 고기 상차림비 내고 구워 먹는 방식, 현지인 점심 웨이팅. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    },
+    {
+     "name": "하나가든",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "나주 현지인 줄서기 육회비빔밥. 장날 11시부터 장사진, 12:40 재료 소진 마감. 점심 한정.",
+     "source": "https://www.diningcode.com/profile.php?rid=f2qRN5xHzdpa"
+    },
+    {
+     "name": "나주 운흥사",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "신라 도선국사 창건 고찰. 석장승(중요민속자료 12호)이 불회사 석장승과 쌍, 나주호 드라이브 경관.",
+     "source": "http://app.visitkorea.or.kr/ContentView.do?cid=129513"
+    },
+    {
+     "name": "비클래시(BECLASSY)",
+     "kind": "카페",
+     "mode": "차 15분",
+     "why": "승촌보 인근 영산강 수변 대형 베이커리 카페. 통유리 강 전망, 직접 로스팅 커피·수제 디저트.",
+     "source": "https://www.ktriptips.com/kor/food/3324605"
+    }
+   ]
+  },
+  {
+   "anchor": "도래한옥마을",
+   "nearby": [
+    {
+     "name": "불회사",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "같은 다도면 덕룡산 천년 고찰. 보물 대웅전·석장승, 300~400년 동백숲, 4월 산사문화제.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=6bf8ff13-2c2f-422a-9ed7-081dff3488ec"
+    },
+    {
+     "name": "다도반점",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "나주호 인근 시골 중식당. 짜장면 7,000원·간짜장·짬뽕 가성비, 오픈 주방, 부드럽고 담백.",
+     "source": "https://www.diningcode.com/profile.php?rid=d3WZ6SXoarHs"
+    },
+    {
+     "name": "전라남도산림자원연구소",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "770여 종 난대성 수목원. 메타세쿼이아길·잣나무숲 무료 힐링 공간, 무장애 나눔길로 가족 적합.",
+     "source": "https://www.naju.go.kr/tour/sights/nature/all?mode=view&idx=292"
+    },
+    {
+     "name": "느러지전망대",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "영산강 S자 한반도 지형 조망. 250년 팽나무 정원과 테라스 불멍·물멍, 무료 뷰포인트.",
+     "source": "https://www.tournews21.com/news/articleView.html?idxno=118563"
+    },
+    {
+     "name": "송현불고기",
+     "kind": "맛집",
+     "mode": "차 25분",
+     "why": "43년 연탄 돼지불고기 단일 메뉴. EBS 극한직업·3대천왕 출연, 단짠+은은한 불향. 점심 웨이팅.",
+     "source": "https://v.daum.net/v/62nbdvc6Of"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 25분",
+     "why": "110년 나주 3대 곰탕 명가. 새벽부터 끓인 맑은 한우 육수, 금성관 앞 식후 구도심 산책.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "영산포등대홍어맛집",
+     "kind": "맛집",
+     "mode": "차 30분",
+     "why": "영산포 홍어거리 대표. 삭힌 홍어회·삼합·무침 정통 남도 요리, 식후 영산강 포구 산책. 화요일 격주 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    },
+    {
+     "name": "카페 더뷰",
+     "kind": "카페",
+     "mode": "차 30분",
+     "why": "영산강 통유리 뷰 카페. 물 위에 떠 있는 느낌의 SNS 인증샷 명소, 홍어거리와 동선 연계.",
+     "source": "https://www.diningcode.com/profile.php?rid=SQzponEqpFKf"
+    }
+   ]
+  },
+  {
+   "anchor": "국립나주박물관",
+   "nearby": [
+    {
+     "name": "반남 고분군",
+     "kind": "관광",
+     "mode": "도보",
+     "why": "박물관 옆 야외 신촌리 2·3호분 인접. 마한 고분 40여 기 자미산 분포, 대형 옹관·금동관 출토지.",
+     "source": "https://naju.museum.go.kr/kor/sub01_07.do"
+    },
+    {
+     "name": "대가참숯불구이",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "나주밥상 지정 모범음식점. 한식대가 출신 주방장 과일 양념 숯불 돼지갈비·제육쌈밥, 점심 줄. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=7up8va3CPRat"
+    },
+    {
+     "name": "복암리고분전시관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "국내 최대 대형 옹관 재현 전시·체험관. 옹관묘·석실묘 재현, 마한 문화 입체 완성. 무료.",
+     "source": "https://cm.asiae.co.kr/article/2016042716313095605"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "전국 유일 천연염색 박물관. 쪽·치자·감 손수건·에코백 염색 체험, 황포돛배 선착장 연결. 무료.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1964년 개업 60년 구진포 장어 노포, 백년가게. 주방서 완전히 구워 내옴, 장어구이 27,000원.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    },
+    {
+     "name": "산포장어",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "나주·광주 주민 몸보신 로컬 민물장어집. 두툼하고 탱글한 식감, 광활한 주차장. 연중무휴.",
+     "source": "https://www.diningcode.com/profile.php?rid=6Q6CKmDfqfjH"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "백반기행 280회 출연 영산포 홍어거리. 원산지 선택 가능, 홍어정식 2인 한 상. 화요일 격주 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "영산강 선착장 출발 왕복 10km·50분. 영산포 홍어거리 식사와 반나절 코스 완성.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4547df63-7544-44b6-be94-fb7b13755dd3"
+    }
+   ]
+  },
+  {
+   "anchor": "반남고분군",
+   "nearby": [
+    {
+     "name": "국립나주박물관",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "반남고분군 출토 금동관·신발·옹관 핵심 연계지. 실감 콘텐츠·개방형 수장고, 신촌리고분 도보 연결. 무료.",
+     "source": "https://naju.museum.go.kr/kor/sub01_07.do"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "나주 쪽빛 천연염색 본고장. 쪽·황토·치자 계절별 염색 체험, 황포돛배 선착장 인접. 무료.",
+     "source": "https://www.naju.go.kr/tour/sights/culture/culture_center?mode=view&idx=630"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "영산강 뱃길 왕복 10km·50분 유람. 선착장 옆 영산포 홍어거리로 체험 후 식사 연계.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "영산포등대홍어맛집",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "백반기행 280회 출연. 홍어삼합·홍어정식 대표, 시골인심 리필, 화요일 격주 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    },
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1964년 개업 구진포 장어거리 최고 역사 노포. 영산강 민물장어 소금·양념구이, 넓은 주차장.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    },
+    {
+     "name": "느러지전망대",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "15m 전망대에서 영산강 한반도 지형 조망. 6월 중순~7월 초 200m 수국길 만개, 무료.",
+     "source": "https://www.newsis.com/view/NISX20240524_0002746944"
+    },
+    {
+     "name": "봉황황토마을 농촌 체험",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "반남고분군 인근 황토 체험마을. 황토 도자기·농산물 수확 체험, 마한 문화권 역사 동선.",
+     "source": "http://hwangto.invil.org/index.html?menuno=2192&lnb=30300"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 20분",
+     "why": "1910년 창업 4대 원조. 맑고 깊은 곰탕·수육곰탕, 반남 나들이 후 원도심과 연계 방문.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    }
+   ]
+  },
+  {
+   "anchor": "남도의병역사박물관",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "1910년 창업 4대 노포. 새벽 2시부터 끓인 한우 육수 맑은 곰탕, 주말 오전 웨이팅 필수.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "영산포 홍어거리",
+     "kind": "맛집",
+     "mode": "차 12분",
+     "why": "선창가 40여 홍어집 밀집. 황토 옹기 숙성 삼합 대표, 영일복집·영산포홍어 등 실력파 포진.",
+     "source": "https://www.naju.go.kr/tour/food/taste_road/skate"
+    },
+    {
+     "name": "송현불고기",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "43년 연탄불 돼지불고기 단일 메뉴. EBS 극한직업 출연, 단짠 간장 양념+강한 불향. 점심 대기.",
+     "source": "https://v.daum.net/v/62nbdvc6Of"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 12분",
+     "why": "영산강 왕복 5km·50분 황포돛배. 1977년 사라졌다 2008년 복원, 의병 답사 후 강변 힐링.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "국립나주박물관 + 반남고분군",
+     "kind": "관광",
+     "mode": "차 12분",
+     "why": "영산강 마한 고대문화 전시. 창밖 1,500년 봉분 능선, 신촌리 금동관 상설 전시. 무료.",
+     "source": "https://naju.museum.go.kr/"
+    },
+    {
+     "name": "나주읍성·금성관 일대",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "600년 행정 중심 읍성. 객사 금성관·동헌·문화관 보존, 곰탕거리·향교길 카페와 도보 동선. 무료.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=41f24cb6-0384-4ca5-a199-0eca81963e3e"
+    },
+    {
+     "name": "향교길20카페",
+     "kind": "카페",
+     "mode": "차 15분",
+     "why": "나주읍성 서성문 옆 2층 한옥카페. 정원·들판 뷰, 쌍화차·대추차·가래떡구이, 나주배 쌀빵.",
+     "source": "https://www.elle.co.kr/article/70180"
+    },
+    {
+     "name": "부영식육식당",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "남평 현지 단골 생고기 전문. 갈 때마다 웨이팅, 생고기비빔밥 시그니처, 외지인 잘 모르는 찐맛집.",
+     "source": "https://www.diningcode.com/profile.php?rid=zTWbQlmlyeCV"
+    }
+   ]
+  },
+  {
+   "anchor": "우습제(연꽃단지)",
+   "nearby": [
+    {
+     "name": "나주영상테마파크",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "주몽·태왕사신기·도깨비 촬영 삼국시대 오픈세트장. 활쏘기·승마·전통의상 체험, 입장 2,000원.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=40f661ac-8e14-44fb-905b-463c6215bb86"
+    },
+    {
+     "name": "왕곡가든",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "SBS 생활의 달인 출연. 당일 한우 생고기비빔밥 시그니처, 11~14시 단시간·재료 소진 마감. 현지 웨이팅.",
+     "source": "https://www.diningcode.com/profile.php?rid=QZrDqBNwXnDo"
+    },
+    {
+     "name": "불회사(덕룡산)",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "366년 고찰, 대웅전 국가보물. 3,000그루 비자나무·동백숲, 2.6km 호랑비 숲길 완만 산책.",
+     "source": "https://www.khan.co.kr/article/202503311313011"
+    },
+    {
+     "name": "영산포홍어(홍어1번지)",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "국내 첫 홍어 명인 운영. 600년 영산포 삭힌 홍어 원조, 홍어삼합·정식, 황포돛배 선착장 인접.",
+     "source": "https://www.diningcode.com/profile.php?rid=65PavUoDwykO"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 15분",
+     "why": "영산포 선착장↔천연염색박물관 왕복 10km·50분. 영산강 갈대밭·죽산보 경치, 홍어거리 연계.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 20분",
+     "why": "폐교 활용 나주 쪽빛 천연염색 본고장. 쪽·황토·치자 체험 사철 예약제, 인간문화재 근거지.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 20분",
+     "why": "110년 노포, 4대째. 새벽 2시부터 6시간 이상 우린 맑고 깊은 한우 육수, 읍성 도보 연계.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "향교길20 카페",
+     "kind": "카페",
+     "mode": "차 20분",
+     "why": "나주읍성 서성문 옆 2층 한옥카페. 푸른 정원·고택 분위기 SNS 명소, 나주배 쌀빵 대표.",
+     "source": "https://www.instagram.com/najucafe20/"
+    }
+   ]
+  },
+  {
+   "anchor": "나주배박물관",
+   "nearby": [
+    {
+     "name": "나주배박물관 배따기 체험",
+     "kind": "체험",
+     "mode": "도보",
+     "why": "박물관 운영 체험. 배 직접 따기·시식·배 인절미 만들기, 가족 10,000원 저렴. 전화 예약 필수.",
+     "source": "https://www.namdonews.com/news/articleView.html?idxno=230975"
+    },
+    {
+     "name": "나주호 둘레길 & 생태탐방로",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "영산강 개발 인공 담수호. 2025년 전 구간 개통 8km 순환 둘레길, 사계절 풍경, 불회사 연계. 무료.",
+     "source": "https://www.telltrip.com/domestic-travel/najuho-ecotrail-lake-forest-trekking/"
+    },
+    {
+     "name": "불회사",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "366년 천년 고찰, 국보급 대웅전. 동백숲 배경, 나주 단풍 가장 늦고 진한 가을 드라이브 명소.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=6bf8ff13-2c2f-422a-9ed7-081dff3488ec"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1910년 창업 4대 나주 3대 곰탕 원조. 뽀얗고 담백한 곰탕, 금성관 앞이라 관광·식사 한번에.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "영산포등대홍어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "백반기행 소개 영산포 홍어거리 대표. 황토방 옹기 숙성 삼합·회·전, 나주 3미 체험지.",
+     "source": "https://www.diningcode.com/profile.php?rid=UEWlwPJ42odP"
+    },
+    {
+     "name": "영산강 황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "옛 영산포구 출발 황포돛배 왕복 5km·50분. 선장 구수한 전라도 해설, 홍어거리 연계.",
+     "source": "https://www.naju.go.kr/tour/recommend/experience/sailboat"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "차 10분",
+     "why": "1939년 고택 4천 평 정원 복합문화공간. 나주배 크림라떼·뱅쇼·빵·양갱, 배 디저트 한자리.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "국립나주박물관 & 반남고분군",
+     "kind": "관광",
+     "mode": "차 15분",
+     "why": "영산강 마한 고대문화 전문. 금동관·금동신발과 창밖 봉분 능선, 야외 고분 탐방. 무료.",
+     "source": "https://naju.museum.go.kr/"
+    }
+   ]
+  },
+  {
+   "anchor": "한국천연염색박물관",
+   "nearby": [
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "1964년 개업 60년 구진포 장어 노포. 소금·양념구이, 점심 웨이팅, 박물관 최근접 식사처.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    },
+    {
+     "name": "복암리 고분군 및 고분전시관",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "사적 404호 '아파트형 고분군'. 한 봉분에 40여 기 무덤, 영산강 토착+백제 문화. 무료.",
+     "source": "http://www.njbogam.or.kr"
+    },
+    {
+     "name": "장생장어구이",
+     "kind": "맛집",
+     "mode": "차 5분",
+     "why": "영산강변 장어 전문점. 구이·장어탕, 09:30~21:00 점심·저녁 모두 가능, 강변 드라이브 연계.",
+     "source": "https://www.diningcode.com/profile.php?rid=PAHTZ5dUS3Ed"
+    },
+    {
+     "name": "백호문학관",
+     "kind": "관광",
+     "mode": "차 10분",
+     "why": "조선 문인 백호 임제 유배지 문학관. 박물관 공식 소개 주변 관광지, 영산강 둔치 산책로 연결.",
+     "source": "http://www.naturaldyeing.or.kr/www/museum/vacationland"
+    },
+    {
+     "name": "영산나루",
+     "kind": "카페",
+     "mode": "차 10분",
+     "why": "황포돛배 선착장 옆 250년 팽나무 정원 복합 공간. 전통찻집·레스토랑, 영산강 뷰. 화 휴무.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=866421ab-29c2-4acb-b7f4-bd6f27650e18"
+    },
+    {
+     "name": "홍어1번지",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "영산포 홍어거리. 2층 영산강 조망, 홍어삼합·무침·애국 풀코스, 전남 음식 버킷리스트.",
+     "source": "https://www.naju.go.kr/tour/food/taste_road/skate"
+    },
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "110년 4대 곰탕 원조, 나주 3미. 맑은 육수에 부드러운 수육·깍두기, 평일 오전 일찍 권장.",
+     "source": "https://ncms.nculture.org/long-standing-shops/story/8316"
+    },
+    {
+     "name": "황포돛배 체험",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "영산강 옛 뱃길 황포돛배 유람. 영산포 구항구 출발 약 40~50분, 영산나루·홍어거리 동선.",
+     "source": "https://namdokorea.com/tour/info/area/areaList.do?menuCd=T002001004&area=AREA_NAJU&infoId=0000008236"
+    }
+   ]
+  },
+  {
+   "anchor": "나주읍성 서성문",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "4대 110년 나주 3대 곰탕 원조. 금성관 앞, 맑고 깊은 사골 국물 수육곰탕 시그니처. 오전 만석.",
+     "source": "https://namu.wiki/w/%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%20%ED%95%98%EC%96%80%EC%A7%91"
+    },
+    {
+     "name": "남평할매집",
+     "kind": "맛집",
+     "mode": "도보 7분",
+     "why": "1975년 개업 나주 3대 곰탕. 100% 국내산 한우, 기름기 없는 맑은 국물, 현지 단골 노포.",
+     "source": "https://namu.wiki/w/%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%EC%9B%90%EC%A1%B0%EC%A7%9160%EB%85%84%20%EB%82%A8%ED%8F%89%ED%95%A0%EB%A7%A4%EC%A7%91"
+    },
+    {
+     "name": "금성관",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "보물 2037호, 전국 객사 중 가장 웅장. 목사내아 금학헌 한옥 숙박, 문화관 디오라마. 서성문 5분.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=49c0b004-b11d-4adc-b56c-80d97fd82b3a"
+    },
+    {
+     "name": "나주향교",
+     "kind": "관광",
+     "mode": "도보 10분",
+     "why": "서성문·금성관과 연결되는 조선 향교. 읍성 고샅길 서부 코스 중간, 고목·전통 건축 사진 명소.",
+     "source": "https://korean.visitkorea.or.kr/detail/rem_detail.do?cotid=185a56c3-2853-41ff-b897-4bc635e30b28"
+    },
+    {
+     "name": "3917마중",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "전남 우수건축자산 1호 4,000평 고택 복합문화공간. 나주배 음료·쿠키·스콘, 사계절 정원 풍경.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "다올",
+     "kind": "카페",
+     "mode": "도보 5분",
+     "why": "명당거리 한옥 카페. 가야금 음악 고즈넉한 분위기, 오미자·유자·복분자 전통차와 디저트 호평.",
+     "source": "https://kr.trip.com/moments/detail/naju-si-1595529-119972838/"
+    },
+    {
+     "name": "영산포 홍어거리",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "흑산도 홍어 자연 발효 집산지, 40여 홍어집. 등대홍어맛집 방송 다수, 홍어삼합 필수 체험.",
+     "source": "https://www.naju.go.kr/tour/food/taste_road/skate"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 10분",
+     "why": "폐교 재활용 전국 유일 천연염색 박물관. 쪽·황토·치자 사계절 염색 체험, 가족 단위 인기.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    }
+   ]
+  },
+  {
+   "anchor": "나주 중앙시장·매일시장",
+   "nearby": [
+    {
+     "name": "나주곰탕 하얀집",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "시장 옆 곰탕거리 4대 110년 원조. 맑은 육수에 갓 썬 고기, 아침 8시부터 영업. 웨이팅 잦음.",
+     "source": "https://namu.wiki/w/%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%20%ED%95%98%EC%96%80%EC%A7%91"
+    },
+    {
+     "name": "삼대나주곰탕 노안집",
+     "kind": "맛집",
+     "mode": "도보 3분",
+     "why": "1963년 장터 국밥집 시작 3대 노포. 나주 3대 곰탕, 구수한 국물·넉넉한 고기. 월 휴무.",
+     "source": "https://namu.wiki/w/%EC%82%BC%EB%8C%80%EB%82%98%EC%A3%BC%EA%B3%B0%ED%83%95%EC%9B%90%EC%A1%B0%EC%A7%91%20%EB%85%B8%EC%95%88%EC%A7%91"
+    },
+    {
+     "name": "초록추어탕",
+     "kind": "맛집",
+     "mode": "도보 5분",
+     "why": "현지인 추어탕 전문점. 추어탕 9,000원 가성비, 추어빈대떡도 별미, 소면 넣어 먹는 현지 스타일.",
+     "source": "https://www.diningcode.com/profile.php?rid=wBFzJoRynOVs"
+    },
+    {
+     "name": "금성관",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "전국 최대 현존 객사, 국가지정 보물. 천 년 목사골 상징, 야간 조명 야경. 곰탕거리 동선 연결.",
+     "source": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=49c0b004-b11d-4adc-b56c-80d97fd82b3a"
+    },
+    {
+     "name": "나주읍성 고샅길",
+     "kind": "체험",
+     "mode": "도보 10~20분",
+     "why": "조선 향리 마을 골목 도보 코스(서부길 3km). 향교·서성문·금학헌 연결, 자유 산책 반나절.",
+     "source": "https://www.naju.go.kr/tour/recommend"
+    },
+    {
+     "name": "3917 마중",
+     "kind": "카페",
+     "mode": "도보 10분",
+     "why": "전남 우수건축자산 1호 고택 복합문화카페. 나주배 크림라떼·양갱·빵 로컬 디저트, 한옥 마당.",
+     "source": "https://www.diningcode.com/profile.php?rid=YiSxDqThev72"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "나주 쪽염색 중심지. 상설전시+쪽·황토·치자 염색 체험, 손수건·스카프 인기, 가족 단위 좋음.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "영산포 홍어거리",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "600년 전통 40여 홍어집. 영산포등대홍어 방송 소개, 홍어정식 전 부위 코스, 재료 소진 주의.",
+     "source": "https://busan7.com/entry/%EB%B0%B1%EB%B0%98%EA%B8%B0%ED%96%89-%EB%82%98%EC%A3%BC-600%EB%85%84-%EC%A0%84%ED%86%B5-%EC%98%81%EC%82%B0%ED%8F%AC-%ED%99%8D%EC%96%B4%EA%B1%B0%EB%A6%AC-%ED%99%8D%EC%96%B4%EC%A0%95%EC%8B%9D-%EC%BD%94%EC%8A%A4"
+    }
+   ]
+  },
+  {
+   "anchor": "영모정",
+   "nearby": [
+    {
+     "name": "백호문학관",
+     "kind": "관광",
+     "mode": "도보 5분",
+     "why": "영모정 옆 백호 임제 무료 문학관. 거문고·보검·옥퉁소 유물, 영모정-문학관-회진나루 탐방로.",
+     "source": "https://www.naju.go.kr/tour/sights/nature/river?mode=view&idx=280"
+    },
+    {
+     "name": "나주복암리고분전시관",
+     "kind": "관광",
+     "mode": "차 5분",
+     "why": "영산강 마한·백제 핵심 유적. '아파트형 고분' 복암리 3호분 전시, 미니어처 옹관 만들기 체험.",
+     "source": "http://www.njbogam.or.kr"
+    },
+    {
+     "name": "한국천연염색박물관",
+     "kind": "체험",
+     "mode": "차 5분",
+     "why": "나주 쪽 염색 본고장 무료 박물관. 주말 에코백·스카프·티셔츠 천연염색 체험, 가족 여행 제격.",
+     "source": "https://www.naturaldyeing.or.kr/"
+    },
+    {
+     "name": "신흥장어",
+     "kind": "맛집",
+     "mode": "차 10분",
+     "why": "1964년 개업 노포, 남도음식명가. 주방서 완전히 구워 내옴, 장어구이 27,000원, 구진포 강 뷰.",
+     "source": "https://www.diningcode.com/profile.php?rid=q6VFMstw1BD6"
+    },
+    {
+     "name": "카페 풍정",
+     "kind": "카페",
+     "mode": "차 10분",
+     "why": "직접 운영 농장 블루베리요거트·화덕피자·빙수 시그니처. 논밭 뷰 전원카페, 다이닝코드 5.0.",
+     "source": "https://www.diningcode.com/profile.php?rid=VhjWSyRkM54S"
+    },
+    {
+     "name": "영산포홍어",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "600년 영산포 숙성 홍어 전문. 홍어정식 칠레·흑산도산, 2층 영산강 뷰, 한국인의 밥상 출연.",
+     "source": "https://www.diningcode.com/profile.php?rid=mVL8fQ7a2Ul1"
+    },
+    {
+     "name": "카페 더뷰",
+     "kind": "카페",
+     "mode": "차 15분",
+     "why": "영산강 통유리 리버뷰 카페. 물 위에 떠 있는 듯한 분위기, 커피·타르트, 홍어 식사 후 후식. 월 휴무.",
+     "source": "https://www.diningcode.com/profile.php?rid=SQzponEqpFKf"
+    },
+    {
+     "name": "하나가든",
+     "kind": "맛집",
+     "mode": "차 15분",
+     "why": "현지인 줄서는 구도심 노포. 도축 당일 신선육 육회비빔밥 시그니처, 점심만 영업, 주말 웨이팅.",
+     "source": "https://www.diningcode.com/profile.php?rid=f2qRN5xHzdpa"
+    }
+   ]
+  }
+ ]
+}

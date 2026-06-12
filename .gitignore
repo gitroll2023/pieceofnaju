@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# 로컬 데이터 파이프라인 (원본 크롤·CSV·중간 산출물 — 서빙 안 됨, 커밋 안 함)
+/data/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -13,6 +13,9 @@
 :root {
   --radius: 1rem;
 
+  /* 폰 프레임 바깥(데스크탑) 배경 */
+  --frame: #1f1c18;
+
   /* 브랜드 원색 */
   --naju-bg: #faf7f2;
   --naju-bg-soft: #f3ede2;
@@ -55,6 +58,41 @@
   --radius-md: calc(var(--radius) - 4px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 6px);
+}
+
+/* 다크 모드 — 같은 토큰을 어두운 값으로 덮어써 전 화면 자동 전환 */
+.dark {
+  --frame: #0b0a08;
+  --naju-bg: #14120e;
+  --naju-bg-soft: #1e1a14;
+  --naju-ink: #efe9dc;
+  --naju-ink-soft: #a89f8d;
+  --naju-line: #352f25;
+  --naju-pear: #eab14a;
+  --naju-pear-deep: #f1bd64;
+  --naju-river: #62a2b6;
+  --naju-river-soft: #80b6c7;
+  --naju-cream: #241f16;
+  --naju-hongeo: #d8788b;
+
+  --background: var(--naju-bg);
+  --foreground: var(--naju-ink);
+  --card: #1d1913;
+  --card-foreground: var(--naju-ink);
+  --popover: #1d1913;
+  --popover-foreground: var(--naju-ink);
+  --primary: var(--naju-river);
+  --primary-foreground: #0a1418;
+  --secondary: #2a2417;
+  --secondary-foreground: #efe2c8;
+  --muted: #221d16;
+  --muted-foreground: var(--naju-ink-soft);
+  --accent: var(--naju-pear);
+  --accent-foreground: #2a1c06;
+  --destructive: #e0584a;
+  --border: var(--naju-line);
+  --input: var(--naju-line);
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -127,11 +165,14 @@ summary {
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  /* 스크롤바 자리를 항상 예약 → 콘텐츠가 짧은 탭/긴 탭을 오갈 때
+     화면 폭이 바뀌어 레이아웃이 흔들리는 것 방지 */
+  scrollbar-gutter: stable;
 }
 
 body {
   margin: 0;
-  background-color: var(--naju-ink);
+  background-color: var(--frame);
   color: var(--foreground);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
@@ -181,6 +222,16 @@ body {
   letter-spacing: -0.01em;
 }
 
+/* 내조각 — 퍼즐 조각 모양 썸네일 (SVG 마스크) */
+.piece-thumb {
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 H42 C42,10 58,10 58,20 H80 V42 C90,42 90,58 80,58 V80 H58 C58,90 42,90 42,80 H20 V58 C10,58 10,42 20,42 Z" fill="%23000"/></svg>');
+  mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M20,20 H42 C42,10 58,10 58,20 H80 V42 C90,42 90,58 80,58 V80 H58 C58,90 42,90 42,80 H20 V58 C10,58 10,42 20,42 Z" fill="%23000"/></svg>');
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
 /* 내 위치 점 (지도) */
 .me-dot {
   position: relative;
@@ -214,7 +265,7 @@ body {
   width: 100%;
   max-width: 480px;
   padding-bottom: env(safe-area-inset-bottom);
-  background: rgba(255, 253, 249, 0.86);
+  background: color-mix(in oklab, var(--card) 88%, transparent);
   backdrop-filter: blur(14px);
   border-top: 1px solid var(--naju-line);
 }
@@ -329,3 +380,20 @@ body {
 .animate-rise {
   animation: naju-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+
+/* 스플래시 — 떠다니는 조각 */
+@keyframes naju-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+.animate-float {
+  animation: naju-float 4.5s ease-in-out infinite;
+}
+
+/* 스플래시 등장/퇴장 */
+@keyframes naju-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.intro-enter { animation: naju-fade-in 0.45s ease both; }
+.intro-leave { animation: naju-fade-in 0.4s ease reverse both; }

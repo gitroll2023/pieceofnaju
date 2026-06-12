@@ -2,8 +2,10 @@
 
 import { Puzzle } from "lucide-react";
 import { useStamps, type StampInput } from "@/lib/useStamps";
+import { useAuth } from "@/lib/useAuth";
+import { openAuth } from "@/lib/useAuthPrompt";
 
-/** "나주 한조각" 수집 토글 — 가게/장소를 내 조각에 담는다 */
+/** "나주 한조각" 수집 토글 — 가게/장소를 내 조각에 담는다 (로그인 필수) */
 export default function StampButton({
   item,
   compact = false,
@@ -12,6 +14,7 @@ export default function StampButton({
   compact?: boolean;
 }) {
   const { has, toggle } = useStamps();
+  const { user } = useAuth();
   const on = has(item.id);
 
   return (
@@ -20,6 +23,7 @@ export default function StampButton({
       onClick={(e) => {
         e.preventDefault();
         e.stopPropagation();
+        if (!user) { openAuth(); return; } // 비회원은 로그인 후에만 조각 수집
         toggle(item);
       }}
       aria-pressed={on}

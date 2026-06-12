@@ -1,7 +1,7 @@
 "use client";
 
 import { MapPin, Puzzle, Navigation } from "lucide-react";
-import { CATEGORY_META, PROGRAM_META, type Merchant } from "@/lib/data/merchants";
+import { CATEGORY_META, PROGRAM_META, visiblePrograms, type Merchant } from "@/lib/data/merchants";
 import { directionsUrl } from "@/lib/geo";
 import StampButton from "@/components/ui/StampButton";
 
@@ -49,12 +49,12 @@ export default function TodayPiece({ m }: { m: Merchant }) {
         </div>
 
         <div className="flex flex-wrap items-center gap-1.5 px-4 pb-3.5">
-          <StampButton item={{ id: m.id, n: m.n, c: m.c, d: m.d }} />
+          <StampButton item={{ id: m.id, n: m.n, c: m.c, d: m.d, lat: m.lat, lng: m.lng, t: m.t }} />
           <a href={directionsUrl(m.n, m.lat, m.lng)} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-0.5 rounded-full border border-line bg-card px-2 py-1 text-[11px] font-bold text-river active:scale-95">
             <Navigation className="size-3" />길찾기
           </a>
-          {m.p.map((k) => (
+          {visiblePrograms(m.p).map((k) => (
             <span
               key={k}
               className="rounded-md px-1.5 py-0.5 text-[10.5px] font-bold text-white"

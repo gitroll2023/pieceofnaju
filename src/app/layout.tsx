@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Nanum_Myeongjo } from "next/font/google";
 import "./globals.css";
 import TabBar from "@/components/shell/TabBar";
+import SideMenu from "@/components/shell/SideMenu";
 import DragScroll from "@/components/shell/DragScroll";
+import IntroSplash from "@/components/intro/IntroSplash";
+import VisitTracker from "@/components/shell/VisitTracker";
 
 // 브랜드/섹션 타이틀용 한글 세리프 (에디토리얼 손맛)
 const serifKr = Nanum_Myeongjo({
@@ -34,12 +37,20 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ko" className={serifKr.variable}>
+    <html lang="ko" className={serifKr.variable} suppressHydrationWarning>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('naju.theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme:dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}`,
+          }}
+        />
         <div className="app-shell">
           <main className="app-main">{children}</main>
           <TabBar />
         </div>
+        <SideMenu />
+        <IntroSplash />
+        <VisitTracker />
         <DragScroll />
       </body>
     </html>

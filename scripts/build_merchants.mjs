@@ -50,8 +50,9 @@ for (const r of rows) {
   });
 }
 
-mkdirSync("public/data", { recursive: true });
-writeFileSync("public/data/merchants.json", JSON.stringify(out), "utf-8");
+// public 밖 src/data 로 출력 — 정적 URL로 직접 다운로드되지 않게(API 경유만)
+mkdirSync("src/data", { recursive: true });
+writeFileSync("src/data/merchants.json", JSON.stringify(out), "utf-8");
 
 // 요약
 const byCat = {}, byProg = {}, geoCnt = {};

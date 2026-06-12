@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Map, Route, Store, Puzzle } from "lucide-react";
+import { Map, Route, Puzzle } from "lucide-react";
 
 const TABS = [
-  { href: "/", label: "가이드", icon: Map },
-  { href: "/merchants", label: "혜택", icon: Store },
-  { href: "/course", label: "코스", icon: Route },
+  { href: "/", label: "발견", icon: Map },
+  { href: "/recommend", label: "추천", icon: Route },
   { href: "/pieces", label: "내조각", icon: Puzzle },
 ] as const;
 
