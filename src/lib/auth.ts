@@ -4,13 +4,18 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
 // 인증 — 비번은 bcrypt 해시(평문 저장 X), 세션은 HS256 서명 httpOnly 쿠키.
-// AUTH_SECRET 미설정 시 프로덕션에서는 즉시 실패(공개된 폴백 키로 JWT 위조 → 계정·관리자 탈취 방지).
-// 개발 환경에서만 임시 키 허용.
-const rawSecret = process.env.AUTH_SECRET;
-if (!rawSecret && process.env.NODE_ENV === "production") {
-  throw new Error("AUTH_SECRET 환경변수가 설정되지 않았습니다. 프로덕션에서는 필수입니다.");
+// AUTH_SECRET 미설정 시 프로덕션에서는 요청 시점에 실패(공개 폴백 키로 JWT 위조 방지).
+// 빌드 타임 평가를 막기 위해 지연 초기화 — 실제 요청이 올 때만 secret 생성.
+let _secret: Uint8Array | null = null;
+function getSecret(): Uint8Array {
+  if (_secret) return _secret;
+  const raw = process.env.AUTH_SECRET;
+  if (!raw && process.env.NODE_ENV === "production") {
+    throw new Error("AUTH_SECRET 환경변수가 설정되지 않았습니다. 프로덕션에서는 필수입니다.");
+  }
+  _secret = new TextEncoder().encode(raw || "dev-insecure-secret");
+  return _secret;
 }
-const secret = new TextEncoder().encode(rawSecret || "dev-insecure-secret");
 const COOKIE = "naju_session";
 const MAX_AGE = 60 * 60 * 24 * 30; // 30일
 
@@ -24,7 +29,7 @@ export async function createSession(uid: number, nick: string, remember = true) 
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("30d")
-    .sign(secret);
+    .sign(getSecret());
   const c = await cookies();
   c.set(COOKIE, token, {
     httpOnly: true,
@@ -41,7 +46,7 @@ export async function readSession(): Promise<Session | null> {
   const token = c.get(COOKIE)?.value;
   if (!token) return null;
   try {
-    const { payload } = await jwtVerify(token, secret);
+    const { payload } = await jwtVerify(token, getSecret());
     return { uid: Number(payload.uid), nick: String(payload.nick) };
   } catch {
     return null;
@@ -67,7 +72,7 @@ export async function createAdminSession() {
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("12h")
-    .sign(secret);
+    .sign(getSecret());
   const c = await cookies();
   c.set(ADMIN_COOKIE, token, {
     httpOnly: true,
@@ -83,7 +88,7 @@ export async function isAdmin(): Promise<boolean> {
   const token = c.get(ADMIN_COOKIE)?.value;
   if (!token) return false;
   try {
-    const { payload } = await jwtVerify(token, secret);
+    const { payload } = await jwtVerify(token, getSecret());
     return payload.admin === true;
   } catch {
     return false;
