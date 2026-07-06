@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { createPortal } from "react-dom";
 import Cropper, { type Area } from "react-easy-crop";
 import { Check, X, ZoomIn } from "lucide-react";
 import { cropAndCompress } from "@/lib/imagePrep";
@@ -31,7 +32,7 @@ export default function CropModal({
     }
   }
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[3600] flex flex-col bg-black">
       <div className="relative flex-1">
         <Cropper
@@ -62,6 +63,7 @@ export default function CropModal({
           <Check className="size-4" />{working ? "처리 중…" : "이 크기로 담기"}
         </button>
       </div>
-    </div>
+    </div>,
+    document.body,
   );
 }

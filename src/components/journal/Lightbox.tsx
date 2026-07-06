@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { createPortal } from "react-dom";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 export default function Lightbox({
@@ -15,7 +16,7 @@ export default function Lightbox({
   const prev = () => setI((v) => (v - 1 + images.length) % images.length);
   const next = () => setI((v) => (v + 1) % images.length);
 
-  return (
+  return createPortal(
     <div className="fixed inset-0 z-[3600] flex flex-col bg-black/95" onClick={onClose}>
       <button type="button" onClick={onClose}
         className="absolute right-4 top-4 z-10 grid size-9 place-items-center rounded-full bg-white/10 text-white active:scale-90">
@@ -40,6 +41,7 @@ export default function Lightbox({
       {images.length > 1 && (
         <p className="pb-6 text-center text-[12.5px] font-bold text-white/70">{i + 1} / {images.length}</p>
       )}
-    </div>
+    </div>,
+    document.body,
   );
 }

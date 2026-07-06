@@ -92,6 +92,8 @@ const stmts = [
   // 조각당 사진 여러 장(1~5장) — 단일 photo_url에서 배열로 전환
   `ALTER TABLE journal_pieces ADD COLUMN IF NOT EXISTS photo_urls JSONB NOT NULL DEFAULT '[]'`,
   `ALTER TABLE journal_pieces DROP COLUMN IF EXISTS photo_url`,
+  // 검색 시 고른 곳이 이미 사이트에 등록된 가게였다면 그 id를 남김(merchants.json 참조, FK 아님)
+  `ALTER TABLE journal_pieces ADD COLUMN IF NOT EXISTS merchant_id TEXT`,
   // 문화·이벤트 (관리자가 추가/승인/삭제) — 추천 탭 '추천별'
   `CREATE TABLE IF NOT EXISTS culture_events (
     id TEXT PRIMARY KEY,

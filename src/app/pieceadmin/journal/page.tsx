@@ -2,12 +2,16 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { Camera, MapPin, Search, X, Check, ArrowLeft, Loader2 } from "lucide-react";
+import { Camera, MapPin, Search, X, Check, ArrowLeft, Loader2, List as ListIcon } from "lucide-react";
 import InstaGlyph from "@/components/ui/InstaGlyph";
 import CropModal from "@/components/journal/CropModal";
 import Lightbox from "@/components/journal/Lightbox";
+import ManageList from "@/components/journal/ManageList";
 
-type Place = { name: string; address: string; lat: number; lng: number };
+type Place = {
+  name: string; address: string; lat: number; lng: number;
+  known?: boolean; merchantId?: string; catLabel?: string; catEmoji?: string;
+};
 type Mode = "photo" | "insta";
 type Photo = { blob: Blob; url: string };
 const MAX_PHOTOS = 5;
@@ -50,7 +54,26 @@ export default function JournalCapturePage() {
     );
   }
 
-  return <CaptureForm />;
+  return <JournalApp />;
+}
+
+function JournalApp() {
+  const [view, setView] = useState<"add" | "list">("add");
+  return (
+    <>
+      {view === "add" ? <CaptureForm /> : <ManageList />}
+      <nav className="fixed inset-x-0 bottom-0 z-[3100] flex border-t border-line bg-card pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-2"
+        style={{ boxShadow: "0 -4px 16px -8px rgba(31,28,24,0.15)" }}>
+        {([["add", "등록", Camera], ["list", "목록", ListIcon]] as const).map(([k, label, Icon]) => (
+          <button key={k} type="button" onClick={() => setView(k)}
+            className={`flex flex-1 flex-col items-center gap-0.5 py-1 text-[11px] font-bold ${view === k ? "text-pear-deep" : "text-ink-soft/60"}`}>
+            <Icon className="size-5" />
+            {label}
+          </button>
+        ))}
+      </nav>
+    </>
+  );
 }
 
 function CaptureForm() {
@@ -129,6 +152,7 @@ function CaptureForm() {
     form.set("lat", String(place.lat));
     form.set("lng", String(place.lng));
     form.set("memo", memo);
+    if (place.merchantId) form.set("merchantId", place.merchantId);
     if (mode === "photo") photos.forEach((p, i) => form.append("photos", p.blob, `photo-${i}.webp`));
     if (mode === "insta") form.set("instaUrl", instaUrl.trim());
 
@@ -142,7 +166,7 @@ function CaptureForm() {
   }
 
   return (
-    <div className="fixed inset-0 z-[3000] overflow-y-auto bg-background pb-10">
+    <div className="fixed inset-0 z-[3000] overflow-y-auto bg-background pb-24">
       <header className="paper-grain flex items-center gap-3 px-4 pb-4 pt-5">
         <Link href="/pieceadmin" className="grid size-9 shrink-0 place-items-center rounded-full border border-line bg-card active:scale-95">
           <ArrowLeft className="size-4 text-ink-soft" />
@@ -161,7 +185,14 @@ function CaptureForm() {
             <div className="mt-1.5 flex items-center gap-2 rounded-2xl border border-pear/50 bg-pear/10 px-4 py-3">
               <MapPin className="size-4 shrink-0 text-pear-deep" />
               <div className="min-w-0 flex-1">
-                <p className="truncate text-[14px] font-bold text-ink">{place.name}</p>
+                <p className="flex items-center gap-1.5 truncate text-[14px] font-bold text-ink">
+                  {place.name}
+                  {place.known && (
+                    <span className="inline-flex shrink-0 items-center gap-0.5 rounded-full bg-pear/20 px-1.5 py-0.5 text-[10px] font-bold text-pear-deep">
+                      {place.catEmoji} 등록된 가게
+                    </span>
+                  )}
+                </p>
                 <p className="truncate text-[11.5px] text-ink-soft">{place.address}</p>
               </div>
               <button type="button" onClick={() => setPlace(null)} className="shrink-0 text-ink-soft/60"><X className="size-4" /></button>
@@ -180,7 +211,14 @@ function CaptureForm() {
                     <li key={i}>
                       <button type="button" onClick={() => pickPlace(r)}
                         className="block w-full rounded-xl px-3 py-2 text-left active:bg-background">
-                        <p className="text-[13.5px] font-bold text-ink">{r.name}</p>
+                        <p className="flex items-center gap-1.5 text-[13.5px] font-bold text-ink">
+                          {r.name}
+                          {r.known && (
+                            <span className="inline-flex shrink-0 items-center gap-0.5 rounded-full bg-pear/20 px-1.5 py-0.5 text-[10px] font-bold text-pear-deep">
+                              {r.catEmoji} 등록된 가게
+                            </span>
+                          )}
+                        </p>
                         <p className="text-[11.5px] text-ink-soft">{r.address}</p>
                       </button>
                     </li>
