@@ -76,6 +76,22 @@ const stmts = [
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()
   )`,
   `CREATE INDEX IF NOT EXISTS idx_throttle ON contact_throttle(ip_hash, created_at)`,
+  // 관리자가 직접 다니며 남기는 사진 기록(주소 검색 + 사진 또는 인스타 릴스 링크)
+  `CREATE TABLE IF NOT EXISTS journal_pieces (
+    id BIGSERIAL PRIMARY KEY,
+    place_name TEXT NOT NULL DEFAULT '',
+    address TEXT NOT NULL DEFAULT '',
+    lat DOUBLE PRECISION,
+    lng DOUBLE PRECISION,
+    photo_url TEXT NOT NULL DEFAULT '',
+    insta_url TEXT NOT NULL DEFAULT '',
+    memo TEXT NOT NULL DEFAULT '',
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+  )`,
+  `CREATE INDEX IF NOT EXISTS idx_journal_created ON journal_pieces(created_at DESC)`,
+  // 조각당 사진 여러 장(1~5장) — 단일 photo_url에서 배열로 전환
+  `ALTER TABLE journal_pieces ADD COLUMN IF NOT EXISTS photo_urls JSONB NOT NULL DEFAULT '[]'`,
+  `ALTER TABLE journal_pieces DROP COLUMN IF EXISTS photo_url`,
   // 문화·이벤트 (관리자가 추가/승인/삭제) — 추천 탭 '추천별'
   `CREATE TABLE IF NOT EXISTS culture_events (
     id TEXT PRIMARY KEY,

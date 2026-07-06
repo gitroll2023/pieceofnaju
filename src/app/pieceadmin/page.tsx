@@ -1,7 +1,10 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { LayoutDashboard, Store, Star, MessageSquare, Users, Menu, LogOut, Puzzle, Check, X, AtSign, Search, Trash2, CalendarDays, Eye, EyeOff, Plus, Home, Moon, Sun } from "lucide-react";
+import Link from "next/link";
+import { LayoutDashboard, Store, Star, MessageSquare, Users, Menu, LogOut, Puzzle, Check, X, AtSign, Search, Trash2, CalendarDays, Eye, EyeOff, Plus, Home, Moon, Sun, Camera, MapPin } from "lucide-react";
+import InstaGlyph from "@/components/ui/InstaGlyph";
+import Lightbox from "@/components/journal/Lightbox";
 import type { CultureEvent } from "@/lib/data/culture";
 
 // 관리자 전용 팔레트(라이트/다크) — 본문 색은 var(--a-*) 사용
@@ -35,6 +38,7 @@ const TABS = [
   { key: "feedback", label: "건의함", icon: MessageSquare },
   { key: "culture", label: "문화이벤트", icon: CalendarDays },
   { key: "insta", label: "인스타 연결", icon: AtSign },
+  { key: "journal", label: "내 조각", icon: Camera },
   { key: "users", label: "회원", icon: Users },
 ] as const;
 
@@ -152,6 +156,8 @@ export default function PieceAdmin() {
             <CulturePanel />
           ) : tab === "insta" ? (
             <InstaPanel />
+          ) : tab === "journal" ? (
+            <JournalPanel />
           ) : (
             <UsersPanel rows={data.recentUsers} />
           )}
@@ -363,6 +369,84 @@ function InstaPanel() {
           </ul>
         )}
       </div>
+    </div>
+  );
+}
+
+type JournalPiece = {
+  id: number; place_name: string; address: string; lat: number | null; lng: number | null;
+  photo_urls: string[]; insta_url: string; memo: string; at: number;
+};
+
+function JournalPanel() {
+  const [pieces, setPieces] = useState<JournalPiece[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [lightbox, setLightbox] = useState<{ images: string[]; at: number } | null>(null);
+
+  const load = useCallback(async () => {
+    setLoading(true);
+    const d = await fetch("/api/admin/journal").then((r) => r.json()).catch(() => ({}));
+    setPieces(d.pieces || []);
+    setLoading(false);
+  }, []);
+  useEffect(() => { void load(); }, [load]);
+
+  async function del(id: number) {
+    if (typeof window !== "undefined" && !window.confirm("이 조각을 삭제할까요?")) return;
+    await fetch("/api/admin/journal?id=" + id, { method: "DELETE" });
+    await load();
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <p className="text-[12.5px] font-bold text-[var(--a-text2)]">직접 남긴 조각 ({pieces.length})</p>
+        <Link href="/pieceadmin/journal" className="inline-flex items-center gap-1 rounded-xl bg-pear px-3 py-1.5 text-[12px] font-bold text-[#2a1c06]">
+          <Plus className="size-3.5" />새로 등록
+        </Link>
+      </div>
+      {loading ? (
+        <Empty>불러오는 중…</Empty>
+      ) : pieces.length === 0 ? (
+        <Empty>아직 남긴 조각이 없어요. &quot;새로 등록&quot;에서 휴대폰으로 바로 추가해보세요.</Empty>
+      ) : (
+        <ul className="grid grid-cols-2 gap-2.5 md:grid-cols-4">
+          {pieces.map((p) => (
+            <li key={p.id} className="overflow-hidden rounded-2xl border border-[var(--a-border)] bg-[var(--a-surface)]">
+              <button type="button" onClick={() => p.photo_urls.length && setLightbox({ images: p.photo_urls, at: 0 })}
+                className="relative grid aspect-square w-full place-items-center overflow-hidden bg-[var(--a-input)]">
+                {p.photo_urls[0] ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={p.photo_urls[0]} alt={p.place_name} className="size-full object-cover" />
+                ) : (
+                  <InstaGlyph className="size-8 text-[var(--a-text3)]" />
+                )}
+                {p.photo_urls.length > 1 && (
+                  <span className="absolute bottom-1.5 right-1.5 rounded-full bg-black/60 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                    +{p.photo_urls.length - 1}
+                  </span>
+                )}
+              </button>
+              <div className="p-2.5">
+                <p className="truncate text-[12.5px] font-bold text-[var(--a-text)]">{p.place_name}</p>
+                <p className="mt-0.5 flex items-center gap-1 truncate text-[10.5px] text-[var(--a-text3)]">
+                  <MapPin className="size-3 shrink-0" />{p.address || "주소 없음"}
+                </p>
+                {p.memo && <p className="mt-1 line-clamp-2 text-[11px] text-[var(--a-text2)]">{p.memo}</p>}
+                <div className="mt-1.5 flex items-center gap-2">
+                  {p.insta_url && (
+                    <a href={p.insta_url} target="_blank" rel="noreferrer" className="text-[10.5px] font-bold text-[var(--a-link)] underline">릴스 보기</a>
+                  )}
+                  <button onClick={() => del(p.id)} className="ml-auto text-[var(--a-text3)] hover:text-red-400"><Trash2 className="size-3.5" /></button>
+                </div>
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+      {lightbox && (
+        <Lightbox images={lightbox.images} startIndex={lightbox.at} onClose={() => setLightbox(null)} />
+      )}
     </div>
   );
 }
